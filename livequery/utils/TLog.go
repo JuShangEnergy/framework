@@ -1,6 +1,6 @@
 package utils
 
-import "github.com/astaxie/beego/logs"
+import "github.com/beego/beego/logs"
 
 // LogLevel ...
 var LogLevel = map[string]int{

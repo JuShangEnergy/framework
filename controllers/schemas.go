@@ -1,10 +1,10 @@
 package controllers
 
 import (
-	"github.com/freeznet/tomato/errs"
-	"github.com/freeznet/tomato/orm"
-	"github.com/freeznet/tomato/types"
-	"github.com/freeznet/tomato/utils"
+	"github.com/JuShangEnergy/framework/errs"
+	"github.com/JuShangEnergy/framework/orm"
+	"github.com/JuShangEnergy/framework/types"
+	"github.com/JuShangEnergy/framework/utils"
 )
 
 // SchemasController 处理 /schemas 接口的请求

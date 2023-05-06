@@ -4,10 +4,10 @@ import (
 	"encoding/json"
 	"time"
 
-	"github.com/freeznet/tomato/config"
-	"github.com/freeznet/tomato/orm"
-	"github.com/freeznet/tomato/types"
-	"github.com/freeznet/tomato/utils"
+	"github.com/JuShangEnergy/framework/config"
+	"github.com/JuShangEnergy/framework/orm"
+	"github.com/JuShangEnergy/framework/types"
+	"github.com/JuShangEnergy/framework/utils"
 )
 
 const pushStatusCollection = "_PushStatus"
@@ -97,12 +97,13 @@ func (p *pushStatus) setRunning(count int) {
 }
 
 // trackSent 推送完成，传入数据格式如下
-// {
-// 	"device":{
-// 		"deviceType":"ios"
-// 	},
-// 	"transmitted":true
-// }
+//
+//	{
+//		"device":{
+//			"deviceType":"ios"
+//		},
+//		"transmitted":true
+//	}
 func (p *pushStatus) trackSent(results []types.M) error {
 	update := types.M{}
 	numSent := 0

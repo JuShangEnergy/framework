@@ -5,10 +5,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/freeznet/tomato/cache"
-	"github.com/freeznet/tomato/errs"
-	"github.com/freeznet/tomato/types"
-	"github.com/freeznet/tomato/utils"
+	"github.com/JuShangEnergy/framework/cache"
+	"github.com/JuShangEnergy/framework/errs"
+	"github.com/JuShangEnergy/framework/types"
+	"github.com/JuShangEnergy/framework/utils"
 )
 
 func Test_CollectionExists(t *testing.T) {

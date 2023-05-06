@@ -8,9 +8,9 @@ import (
 	"strings"
 	"time"
 
-	"github.com/freeznet/tomato/errs"
-	"github.com/freeznet/tomato/types"
-	"github.com/freeznet/tomato/utils"
+	"github.com/JuShangEnergy/framework/errs"
+	"github.com/JuShangEnergy/framework/types"
+	"github.com/JuShangEnergy/framework/utils"
 )
 
 // Transform ...
@@ -488,7 +488,7 @@ func (t *Transform) transformConstraint(constraint interface{}, inArray bool) (i
 			term, ok := search["$term"].(string)
 			if search["$term"] != nil && !ok {
 				return nil, errs.E(errs.InvalidJSON, "bad $text: $term, should be string")
-			} else if ok{
+			} else if ok {
 				textAnswer["$search"] = term
 			}
 			language, ok := search["$language"].(string)
@@ -506,7 +506,7 @@ func (t *Transform) transformConstraint(constraint interface{}, inArray bool) (i
 			diacriticSensitive, ok := search["$diacriticSensitive"].(bool)
 			if search["$diacriticSensitive"] != nil && !ok {
 				return nil, errs.E(errs.InvalidJSON, "bad $text: $diacriticSensitive, should be boolean")
-			} else if ok{
+			} else if ok {
 				textAnswer["$diacriticSensitive"] = diacriticSensitive
 			}
 			answer[key] = utils.CopyMapM(textAnswer)
@@ -609,7 +609,7 @@ func (t *Transform) transformConstraint(constraint interface{}, inArray bool) (i
 				return nil, errs.E(errs.InvalidJSON, "bad $geoWithin value")
 			}
 			polygon := utils.A(geoWithin["$polygon"])
-			if polygon == nil || len(polygon) < 3{
+			if polygon == nil || len(polygon) < 3 {
 				return nil, errs.E(errs.InvalidJSON, "bad $geoWithin value; $polygon should contain at least 3 GeoPoints")
 			}
 			points := types.S{}
@@ -646,7 +646,7 @@ func (t *Transform) transformConstraint(constraint interface{}, inArray bool) (i
 			}
 			answer[key] = types.M{
 				"$polygon": types.M{
-					"type": "Point",
+					"type":        "Point",
 					"coordinates": types.S{point["longitude"], point["latitude"]},
 				},
 			}
@@ -1740,11 +1740,11 @@ func (g geoPointCoder) isValidJSON(value types.M) bool {
 }
 
 // polygonCoder Polygon 类型处理
-type polygonCoder struct {}
+type polygonCoder struct{}
 
 func (p polygonCoder) databaseToJSON(object interface{}) types.M {
 	return types.M{
-		"__type": "Polygon",
+		"__type":      "Polygon",
 		"coordinates": utils.A(utils.M(object)["coordinates"])[0],
 	}
 }
@@ -1770,7 +1770,7 @@ func (p polygonCoder) isValidDatabaseObject(object interface{}) bool {
 
 func (p polygonCoder) jsonToDatabase(json types.M) (interface{}, error) {
 	coords := utils.A(json["coordinates"])
-	if utils.A(coords[0])[0] != utils.A(coords[len(coords) - 1])[0] || utils.A(coords[0])[1] != utils.A(coords[len(coords) - 1])[1]{
+	if utils.A(coords[0])[0] != utils.A(coords[len(coords)-1])[0] || utils.A(coords[0])[1] != utils.A(coords[len(coords)-1])[1] {
 		coords = append(coords, coords[0])
 	}
 	var unique []types.S
@@ -1790,9 +1790,9 @@ func (p polygonCoder) jsonToDatabase(json types.M) (interface{}, error) {
 		return nil, errs.E(errs.InternalServerError, "GeoJSON: Loop must have at least 3 different vertices")
 	}
 	return types.M{
-		"type": "Polygon",
+		"type":        "Polygon",
 		"coordinates": coords,
-	},nil
+	}, nil
 }
 
 func (p polygonCoder) isValidJSON(value types.M) bool {

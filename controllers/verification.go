@@ -1,11 +1,11 @@
 package controllers
 
 import (
-	"github.com/freeznet/tomato/errs"
-	"github.com/freeznet/tomato/orm"
-	"github.com/freeznet/tomato/rest"
-	"github.com/freeznet/tomato/types"
-	"github.com/freeznet/tomato/utils"
+	"github.com/JuShangEnergy/framework/errs"
+	"github.com/JuShangEnergy/framework/orm"
+	"github.com/JuShangEnergy/framework/rest"
+	"github.com/JuShangEnergy/framework/types"
+	"github.com/JuShangEnergy/framework/utils"
 )
 
 // VerificationController 处理 /verificationEmailRequest 接口的请求

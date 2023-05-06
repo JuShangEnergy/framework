@@ -6,13 +6,13 @@ import (
 	"reflect"
 	"strings"
 
-	"github.com/astaxie/beego"
-	"github.com/freeznet/tomato/client"
-	"github.com/freeznet/tomato/config"
-	"github.com/freeznet/tomato/errs"
-	"github.com/freeznet/tomato/rest"
-	"github.com/freeznet/tomato/types"
-	"github.com/freeznet/tomato/utils"
+	"github.com/JuShangEnergy/framework/client"
+	"github.com/JuShangEnergy/framework/config"
+	"github.com/JuShangEnergy/framework/errs"
+	"github.com/JuShangEnergy/framework/rest"
+	"github.com/JuShangEnergy/framework/types"
+	"github.com/JuShangEnergy/framework/utils"
+	"github.com/beego/beego"
 )
 
 // BaseController ...
@@ -28,7 +28,6 @@ type BaseController struct {
 	JSONBody types.M
 	RawBody  []byte
 }
-
 
 // Prepare 对请求权限进行处理
 // 1. 从请求头中获取各种 key
@@ -176,12 +175,12 @@ func (b *BaseController) Prepare() {
 		return
 	}
 	if info.MasterKey == config.TConfig.MasterKey {
-		b.Auth = &rest.Auth{InstallationID: info.InstallationID, IsMaster: true, IsReadOnly: false, Info: info }
+		b.Auth = &rest.Auth{InstallationID: info.InstallationID, IsMaster: true, IsReadOnly: false, Info: info}
 		return
 	}
 
 	if config.TConfig.ReadOnlyMasterKey != "" && info.MasterKey == config.TConfig.ReadOnlyMasterKey {
-		b.Auth = &rest.Auth{InstallationID: info.InstallationID, IsMaster: true, IsReadOnly: true, Info: info }
+		b.Auth = &rest.Auth{InstallationID: info.InstallationID, IsMaster: true, IsReadOnly: true, Info: info}
 		return
 	}
 

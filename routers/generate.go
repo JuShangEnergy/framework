@@ -1,13 +1,13 @@
 package routers
 
 import (
-	"github.com/astaxie/beego"
-	"github.com/astaxie/beego/context/param"
+	"github.com/beego/beego"
+	"github.com/beego/beego/context/param"
 )
 
 func init() {
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:AggregateController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:AggregateController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:AggregateController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:AggregateController"],
 		beego.ControllerComments{
 			Method:           "HandleFind",
 			Router:           `/:className`,
@@ -16,7 +16,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:AnalyticsController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:AnalyticsController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:AnalyticsController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:AnalyticsController"],
 		beego.ControllerComments{
 			Method:           "Get",
 			Router:           `/`,
@@ -25,7 +25,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:AnalyticsController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:AnalyticsController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:AnalyticsController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:AnalyticsController"],
 		beego.ControllerComments{
 			Method:           "Post",
 			Router:           `/`,
@@ -34,7 +34,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:AnalyticsController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:AnalyticsController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:AnalyticsController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:AnalyticsController"],
 		beego.ControllerComments{
 			Method:           "Delete",
 			Router:           `/`,
@@ -43,7 +43,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:AnalyticsController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:AnalyticsController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:AnalyticsController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:AnalyticsController"],
 		beego.ControllerComments{
 			Method:           "Put",
 			Router:           `/`,
@@ -52,7 +52,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:AnalyticsController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:AnalyticsController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:AnalyticsController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:AnalyticsController"],
 		beego.ControllerComments{
 			Method:           "HandleEvent",
 			Router:           `/:eventName`,
@@ -61,7 +61,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:AnalyticsController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:AnalyticsController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:AnalyticsController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:AnalyticsController"],
 		beego.ControllerComments{
 			Method:           "AppOpened",
 			Router:           `/AppOpened`,
@@ -70,7 +70,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:AudiencesController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:AudiencesController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:AudiencesController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:AudiencesController"],
 		beego.ControllerComments{
 			Method:           "HandleFind",
 			Router:           `/`,
@@ -79,7 +79,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:AudiencesController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:AudiencesController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:AudiencesController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:AudiencesController"],
 		beego.ControllerComments{
 			Method:           "HandleCreate",
 			Router:           `/`,
@@ -88,7 +88,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:AudiencesController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:AudiencesController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:AudiencesController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:AudiencesController"],
 		beego.ControllerComments{
 			Method:           "HandleGet",
 			Router:           `/:objectId`,
@@ -97,7 +97,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:AudiencesController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:AudiencesController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:AudiencesController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:AudiencesController"],
 		beego.ControllerComments{
 			Method:           "HandleUpdate",
 			Router:           `/:objectId`,
@@ -106,7 +106,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:AudiencesController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:AudiencesController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:AudiencesController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:AudiencesController"],
 		beego.ControllerComments{
 			Method:           "HandleDelete",
 			Router:           `/:objectId`,
@@ -115,7 +115,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:BatchController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:BatchController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:BatchController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:BatchController"],
 		beego.ControllerComments{
 			Method:           "HandleBatch",
 			Router:           `/`,
@@ -124,7 +124,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:BatchController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:BatchController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:BatchController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:BatchController"],
 		beego.ControllerComments{
 			Method:           "Get",
 			Router:           `/`,
@@ -133,7 +133,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:BatchController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:BatchController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:BatchController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:BatchController"],
 		beego.ControllerComments{
 			Method:           "Delete",
 			Router:           `/`,
@@ -142,7 +142,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:BatchController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:BatchController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:BatchController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:BatchController"],
 		beego.ControllerComments{
 			Method:           "Put",
 			Router:           `/`,
@@ -151,7 +151,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:ClassesController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:ClassesController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:ClassesController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:ClassesController"],
 		beego.ControllerComments{
 			Method:           "Post",
 			Router:           `/`,
@@ -160,7 +160,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:ClassesController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:ClassesController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:ClassesController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:ClassesController"],
 		beego.ControllerComments{
 			Method:           "Delete",
 			Router:           `/`,
@@ -169,7 +169,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:ClassesController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:ClassesController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:ClassesController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:ClassesController"],
 		beego.ControllerComments{
 			Method:           "Put",
 			Router:           `/`,
@@ -178,7 +178,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:ClassesController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:ClassesController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:ClassesController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:ClassesController"],
 		beego.ControllerComments{
 			Method:           "Get",
 			Router:           `/`,
@@ -187,7 +187,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:ClassesController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:ClassesController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:ClassesController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:ClassesController"],
 		beego.ControllerComments{
 			Method:           "HandleFind",
 			Router:           `/:className`,
@@ -196,7 +196,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:ClassesController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:ClassesController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:ClassesController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:ClassesController"],
 		beego.ControllerComments{
 			Method:           "HandleCreate",
 			Router:           `/:className`,
@@ -205,7 +205,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:ClassesController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:ClassesController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:ClassesController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:ClassesController"],
 		beego.ControllerComments{
 			Method:           "HandleDelete",
 			Router:           `/:className/:objectId`,
@@ -214,7 +214,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:ClassesController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:ClassesController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:ClassesController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:ClassesController"],
 		beego.ControllerComments{
 			Method:           "HandleGet",
 			Router:           `/:className/:objectId`,
@@ -223,7 +223,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:ClassesController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:ClassesController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:ClassesController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:ClassesController"],
 		beego.ControllerComments{
 			Method:           "HandleUpdate",
 			Router:           `/:className/:objectId`,
@@ -232,7 +232,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:CloudCodeController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:CloudCodeController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:CloudCodeController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:CloudCodeController"],
 		beego.ControllerComments{
 			Method:           "DeleteJob",
 			Router:           `/`,
@@ -241,7 +241,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:CloudCodeController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:CloudCodeController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:CloudCodeController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:CloudCodeController"],
 		beego.ControllerComments{
 			Method:           "GetJobs",
 			Router:           `/jobs`,
@@ -250,7 +250,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:CloudCodeController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:CloudCodeController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:CloudCodeController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:CloudCodeController"],
 		beego.ControllerComments{
 			Method:           "CreateJob",
 			Router:           `/jobs`,
@@ -259,7 +259,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:CloudCodeController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:CloudCodeController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:CloudCodeController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:CloudCodeController"],
 		beego.ControllerComments{
 			Method:           "EditJob",
 			Router:           `/jobs/:objectId`,
@@ -268,7 +268,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:CloudCodeController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:CloudCodeController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:CloudCodeController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:CloudCodeController"],
 		beego.ControllerComments{
 			Method:           "GetJobsData",
 			Router:           `/jobs/data`,
@@ -277,7 +277,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:FeaturesController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:FeaturesController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:FeaturesController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:FeaturesController"],
 		beego.ControllerComments{
 			Method:           "HandleGet",
 			Router:           `/`,
@@ -286,7 +286,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:FeaturesController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:FeaturesController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:FeaturesController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:FeaturesController"],
 		beego.ControllerComments{
 			Method:           "Post",
 			Router:           `/`,
@@ -295,7 +295,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:FeaturesController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:FeaturesController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:FeaturesController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:FeaturesController"],
 		beego.ControllerComments{
 			Method:           "Delete",
 			Router:           `/`,
@@ -304,7 +304,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:FeaturesController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:FeaturesController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:FeaturesController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:FeaturesController"],
 		beego.ControllerComments{
 			Method:           "Put",
 			Router:           `/`,
@@ -313,7 +313,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:FilesController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:FilesController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:FilesController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:FilesController"],
 		beego.ControllerComments{
 			Method:           "Delete",
 			Router:           `/`,
@@ -322,7 +322,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:FilesController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:FilesController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:FilesController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:FilesController"],
 		beego.ControllerComments{
 			Method:           "Get",
 			Router:           `/`,
@@ -331,7 +331,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:FilesController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:FilesController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:FilesController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:FilesController"],
 		beego.ControllerComments{
 			Method:           "Post",
 			Router:           `/`,
@@ -340,7 +340,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:FilesController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:FilesController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:FilesController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:FilesController"],
 		beego.ControllerComments{
 			Method:           "Put",
 			Router:           `/`,
@@ -349,7 +349,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:FilesController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:FilesController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:FilesController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:FilesController"],
 		beego.ControllerComments{
 			Method:           "HandleGet",
 			Router:           `/:appId/:filename`,
@@ -358,7 +358,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:FilesController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:FilesController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:FilesController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:FilesController"],
 		beego.ControllerComments{
 			Method:           "HandleCreate",
 			Router:           `/:filename`,
@@ -367,7 +367,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:FilesController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:FilesController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:FilesController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:FilesController"],
 		beego.ControllerComments{
 			Method:           "HandleDelete",
 			Router:           `/:filename`,
@@ -376,7 +376,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:FunctionsController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:FunctionsController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:FunctionsController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:FunctionsController"],
 		beego.ControllerComments{
 			Method:           "Get",
 			Router:           `/`,
@@ -385,7 +385,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:FunctionsController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:FunctionsController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:FunctionsController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:FunctionsController"],
 		beego.ControllerComments{
 			Method:           "Post",
 			Router:           `/`,
@@ -394,7 +394,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:FunctionsController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:FunctionsController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:FunctionsController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:FunctionsController"],
 		beego.ControllerComments{
 			Method:           "Delete",
 			Router:           `/`,
@@ -403,7 +403,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:FunctionsController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:FunctionsController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:FunctionsController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:FunctionsController"],
 		beego.ControllerComments{
 			Method:           "Put",
 			Router:           `/`,
@@ -412,7 +412,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:FunctionsController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:FunctionsController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:FunctionsController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:FunctionsController"],
 		beego.ControllerComments{
 			Method:           "HandleCloudFunction",
 			Router:           `/:functionName`,
@@ -421,7 +421,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:FunctionsController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:FunctionsController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:FunctionsController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:FunctionsController"],
 		beego.ControllerComments{
 			Method:           "HandleCloudFunctionGet",
 			Router:           `/:functionName`,
@@ -430,7 +430,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:GlobalConfigController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:GlobalConfigController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:GlobalConfigController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:GlobalConfigController"],
 		beego.ControllerComments{
 			Method:           "HandleGet",
 			Router:           `/`,
@@ -439,7 +439,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:GlobalConfigController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:GlobalConfigController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:GlobalConfigController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:GlobalConfigController"],
 		beego.ControllerComments{
 			Method:           "HandlePut",
 			Router:           `/`,
@@ -448,7 +448,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:GlobalConfigController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:GlobalConfigController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:GlobalConfigController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:GlobalConfigController"],
 		beego.ControllerComments{
 			Method:           "Post",
 			Router:           `/`,
@@ -457,7 +457,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:GlobalConfigController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:GlobalConfigController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:GlobalConfigController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:GlobalConfigController"],
 		beego.ControllerComments{
 			Method:           "Delete",
 			Router:           `/`,
@@ -466,7 +466,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:HealthController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:HealthController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:HealthController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:HealthController"],
 		beego.ControllerComments{
 			Method:           "Get",
 			Router:           `/`,
@@ -475,7 +475,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:HooksController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:HooksController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:HooksController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:HooksController"],
 		beego.ControllerComments{
 			Method:           "Get",
 			Router:           `/`,
@@ -484,7 +484,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:HooksController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:HooksController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:HooksController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:HooksController"],
 		beego.ControllerComments{
 			Method:           "Post",
 			Router:           `/`,
@@ -493,7 +493,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:HooksController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:HooksController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:HooksController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:HooksController"],
 		beego.ControllerComments{
 			Method:           "Delete",
 			Router:           `/`,
@@ -502,7 +502,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:HooksController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:HooksController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:HooksController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:HooksController"],
 		beego.ControllerComments{
 			Method:           "Put",
 			Router:           `/`,
@@ -511,7 +511,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:HooksController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:HooksController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:HooksController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:HooksController"],
 		beego.ControllerComments{
 			Method:           "HandleGetAllFunctions",
 			Router:           `/functions`,
@@ -520,7 +520,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:HooksController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:HooksController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:HooksController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:HooksController"],
 		beego.ControllerComments{
 			Method:           "HandleCreateFunction",
 			Router:           `/functions`,
@@ -529,7 +529,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:HooksController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:HooksController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:HooksController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:HooksController"],
 		beego.ControllerComments{
 			Method:           "HandleGetFunction",
 			Router:           `/functions/:functionName`,
@@ -538,7 +538,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:HooksController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:HooksController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:HooksController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:HooksController"],
 		beego.ControllerComments{
 			Method:           "HandleUpdateFunction",
 			Router:           `/functions/:functionName`,
@@ -547,7 +547,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:HooksController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:HooksController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:HooksController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:HooksController"],
 		beego.ControllerComments{
 			Method:           "HandleCreateTrigger",
 			Router:           `/triggers`,
@@ -556,7 +556,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:HooksController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:HooksController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:HooksController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:HooksController"],
 		beego.ControllerComments{
 			Method:           "HandleGetAllTriggers",
 			Router:           `/triggers`,
@@ -565,7 +565,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:HooksController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:HooksController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:HooksController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:HooksController"],
 		beego.ControllerComments{
 			Method:           "HandleUpdateTrigger",
 			Router:           `/triggers/:className/:triggerName`,
@@ -574,7 +574,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:HooksController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:HooksController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:HooksController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:HooksController"],
 		beego.ControllerComments{
 			Method:           "HandleGetTrigger",
 			Router:           `/triggers/:className/:triggerName`,
@@ -583,7 +583,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:IAPValidationController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:IAPValidationController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:IAPValidationController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:IAPValidationController"],
 		beego.ControllerComments{
 			Method:           "HandlePost",
 			Router:           `/`,
@@ -592,7 +592,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:IAPValidationController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:IAPValidationController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:IAPValidationController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:IAPValidationController"],
 		beego.ControllerComments{
 			Method:           "Get",
 			Router:           `/`,
@@ -601,7 +601,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:IAPValidationController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:IAPValidationController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:IAPValidationController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:IAPValidationController"],
 		beego.ControllerComments{
 			Method:           "Delete",
 			Router:           `/`,
@@ -610,7 +610,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:IAPValidationController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:IAPValidationController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:IAPValidationController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:IAPValidationController"],
 		beego.ControllerComments{
 			Method:           "Put",
 			Router:           `/`,
@@ -619,7 +619,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:InstallationsController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:InstallationsController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:InstallationsController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:InstallationsController"],
 		beego.ControllerComments{
 			Method:           "HandleFind",
 			Router:           `/`,
@@ -628,7 +628,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:InstallationsController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:InstallationsController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:InstallationsController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:InstallationsController"],
 		beego.ControllerComments{
 			Method:           "HandleCreate",
 			Router:           `/`,
@@ -637,7 +637,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:InstallationsController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:InstallationsController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:InstallationsController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:InstallationsController"],
 		beego.ControllerComments{
 			Method:           "Delete",
 			Router:           `/`,
@@ -646,7 +646,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:InstallationsController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:InstallationsController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:InstallationsController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:InstallationsController"],
 		beego.ControllerComments{
 			Method:           "Put",
 			Router:           `/`,
@@ -655,7 +655,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:InstallationsController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:InstallationsController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:InstallationsController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:InstallationsController"],
 		beego.ControllerComments{
 			Method:           "HandleGet",
 			Router:           `/:objectId`,
@@ -664,7 +664,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:InstallationsController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:InstallationsController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:InstallationsController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:InstallationsController"],
 		beego.ControllerComments{
 			Method:           "HandleUpdate",
 			Router:           `/:objectId`,
@@ -673,7 +673,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:InstallationsController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:InstallationsController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:InstallationsController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:InstallationsController"],
 		beego.ControllerComments{
 			Method:           "HandleDelete",
 			Router:           `/:objectId`,
@@ -682,7 +682,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:JobsController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:JobsController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:JobsController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:JobsController"],
 		beego.ControllerComments{
 			Method:           "HandlePost",
 			Router:           `/`,
@@ -691,7 +691,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:JobsController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:JobsController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:JobsController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:JobsController"],
 		beego.ControllerComments{
 			Method:           "Get",
 			Router:           `/`,
@@ -700,7 +700,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:JobsController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:JobsController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:JobsController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:JobsController"],
 		beego.ControllerComments{
 			Method:           "Delete",
 			Router:           `/`,
@@ -709,7 +709,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:JobsController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:JobsController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:JobsController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:JobsController"],
 		beego.ControllerComments{
 			Method:           "Put",
 			Router:           `/`,
@@ -718,7 +718,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:JobsController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:JobsController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:JobsController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:JobsController"],
 		beego.ControllerComments{
 			Method:           "HandleCloudJob",
 			Router:           `/:jobName`,
@@ -727,7 +727,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:LoginController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:LoginController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:LoginController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:LoginController"],
 		beego.ControllerComments{
 			Method:           "HandleLogIn",
 			Router:           `/`,
@@ -736,7 +736,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:LoginController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:LoginController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:LoginController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:LoginController"],
 		beego.ControllerComments{
 			Method:           "Post",
 			Router:           `/`,
@@ -745,7 +745,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:LoginController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:LoginController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:LoginController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:LoginController"],
 		beego.ControllerComments{
 			Method:           "Delete",
 			Router:           `/`,
@@ -754,7 +754,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:LoginController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:LoginController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:LoginController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:LoginController"],
 		beego.ControllerComments{
 			Method:           "Put",
 			Router:           `/`,
@@ -763,7 +763,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:LogoutController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:LogoutController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:LogoutController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:LogoutController"],
 		beego.ControllerComments{
 			Method:           "HandleLogOut",
 			Router:           `/`,
@@ -772,7 +772,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:LogoutController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:LogoutController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:LogoutController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:LogoutController"],
 		beego.ControllerComments{
 			Method:           "Get",
 			Router:           `/`,
@@ -781,7 +781,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:LogoutController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:LogoutController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:LogoutController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:LogoutController"],
 		beego.ControllerComments{
 			Method:           "Delete",
 			Router:           `/`,
@@ -790,7 +790,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:LogoutController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:LogoutController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:LogoutController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:LogoutController"],
 		beego.ControllerComments{
 			Method:           "Put",
 			Router:           `/`,
@@ -799,7 +799,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:LogsController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:LogsController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:LogsController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:LogsController"],
 		beego.ControllerComments{
 			Method:           "HandleGet",
 			Router:           `/`,
@@ -808,7 +808,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:LogsController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:LogsController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:LogsController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:LogsController"],
 		beego.ControllerComments{
 			Method:           "Post",
 			Router:           `/`,
@@ -817,7 +817,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:LogsController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:LogsController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:LogsController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:LogsController"],
 		beego.ControllerComments{
 			Method:           "Delete",
 			Router:           `/`,
@@ -826,7 +826,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:LogsController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:LogsController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:LogsController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:LogsController"],
 		beego.ControllerComments{
 			Method:           "Put",
 			Router:           `/`,
@@ -835,7 +835,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:PublicController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:PublicController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:PublicController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:PublicController"],
 		beego.ControllerComments{
 			Method:           "ChangePassword",
 			Router:           `/choose_password`,
@@ -844,7 +844,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:PublicController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:PublicController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:PublicController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:PublicController"],
 		beego.ControllerComments{
 			Method:           "InvalidLink",
 			Router:           `/invalid_link`,
@@ -853,7 +853,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:PublicController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:PublicController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:PublicController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:PublicController"],
 		beego.ControllerComments{
 			Method:           "InvalidVerificationLink",
 			Router:           `/invalid_verification_link`,
@@ -862,7 +862,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:PublicController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:PublicController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:PublicController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:PublicController"],
 		beego.ControllerComments{
 			Method:           "LinkSendFail",
 			Router:           `/link_send_fail`,
@@ -871,7 +871,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:PublicController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:PublicController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:PublicController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:PublicController"],
 		beego.ControllerComments{
 			Method:           "LinkSendSuccess",
 			Router:           `/link_send_success`,
@@ -880,7 +880,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:PublicController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:PublicController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:PublicController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:PublicController"],
 		beego.ControllerComments{
 			Method:           "PasswordResetSuccess",
 			Router:           `/password_reset_success`,
@@ -889,7 +889,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:PublicController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:PublicController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:PublicController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:PublicController"],
 		beego.ControllerComments{
 			Method:           "RequestResetPassword",
 			Router:           `/request_password_reset`,
@@ -898,7 +898,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:PublicController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:PublicController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:PublicController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:PublicController"],
 		beego.ControllerComments{
 			Method:           "ResetPassword",
 			Router:           `/request_password_reset`,
@@ -907,7 +907,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:PublicController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:PublicController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:PublicController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:PublicController"],
 		beego.ControllerComments{
 			Method:           "ResendVerificationEmail",
 			Router:           `/resend_verification_email`,
@@ -916,7 +916,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:PublicController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:PublicController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:PublicController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:PublicController"],
 		beego.ControllerComments{
 			Method:           "VerifyEmail",
 			Router:           `/verify_email`,
@@ -925,7 +925,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:PublicController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:PublicController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:PublicController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:PublicController"],
 		beego.ControllerComments{
 			Method:           "VerifyEmailSuccess",
 			Router:           `/verify_email_success`,
@@ -934,7 +934,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:PurgeController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:PurgeController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:PurgeController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:PurgeController"],
 		beego.ControllerComments{
 			Method:           "Get",
 			Router:           `/`,
@@ -943,7 +943,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:PurgeController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:PurgeController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:PurgeController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:PurgeController"],
 		beego.ControllerComments{
 			Method:           "Put",
 			Router:           `/`,
@@ -952,7 +952,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:PurgeController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:PurgeController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:PurgeController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:PurgeController"],
 		beego.ControllerComments{
 			Method:           "Post",
 			Router:           `/`,
@@ -961,7 +961,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:PurgeController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:PurgeController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:PurgeController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:PurgeController"],
 		beego.ControllerComments{
 			Method:           "HandleDelete",
 			Router:           `/:className`,
@@ -970,7 +970,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:PushController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:PushController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:PushController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:PushController"],
 		beego.ControllerComments{
 			Method:           "HandlePost",
 			Router:           `/`,
@@ -979,7 +979,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:PushController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:PushController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:PushController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:PushController"],
 		beego.ControllerComments{
 			Method:           "Get",
 			Router:           `/`,
@@ -988,7 +988,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:PushController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:PushController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:PushController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:PushController"],
 		beego.ControllerComments{
 			Method:           "Delete",
 			Router:           `/`,
@@ -997,7 +997,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:PushController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:PushController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:PushController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:PushController"],
 		beego.ControllerComments{
 			Method:           "Put",
 			Router:           `/`,
@@ -1006,7 +1006,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:ResetController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:ResetController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:ResetController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:ResetController"],
 		beego.ControllerComments{
 			Method:           "HandleResetRequest",
 			Router:           `/`,
@@ -1015,7 +1015,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:ResetController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:ResetController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:ResetController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:ResetController"],
 		beego.ControllerComments{
 			Method:           "Get",
 			Router:           `/`,
@@ -1024,7 +1024,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:ResetController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:ResetController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:ResetController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:ResetController"],
 		beego.ControllerComments{
 			Method:           "Delete",
 			Router:           `/`,
@@ -1033,7 +1033,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:ResetController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:ResetController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:ResetController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:ResetController"],
 		beego.ControllerComments{
 			Method:           "Put",
 			Router:           `/`,
@@ -1042,7 +1042,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:RolesController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:RolesController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:RolesController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:RolesController"],
 		beego.ControllerComments{
 			Method:           "HandleFind",
 			Router:           `/`,
@@ -1051,7 +1051,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:RolesController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:RolesController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:RolesController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:RolesController"],
 		beego.ControllerComments{
 			Method:           "HandleCreate",
 			Router:           `/`,
@@ -1060,7 +1060,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:RolesController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:RolesController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:RolesController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:RolesController"],
 		beego.ControllerComments{
 			Method:           "Put",
 			Router:           `/`,
@@ -1069,7 +1069,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:RolesController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:RolesController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:RolesController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:RolesController"],
 		beego.ControllerComments{
 			Method:           "Delete",
 			Router:           `/`,
@@ -1078,7 +1078,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:RolesController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:RolesController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:RolesController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:RolesController"],
 		beego.ControllerComments{
 			Method:           "HandleGet",
 			Router:           `/:objectId`,
@@ -1087,7 +1087,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:RolesController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:RolesController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:RolesController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:RolesController"],
 		beego.ControllerComments{
 			Method:           "HandleUpdate",
 			Router:           `/:objectId`,
@@ -1096,7 +1096,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:RolesController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:RolesController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:RolesController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:RolesController"],
 		beego.ControllerComments{
 			Method:           "HandleDelete",
 			Router:           `/:objectId`,
@@ -1105,7 +1105,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:SchemasController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:SchemasController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:SchemasController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:SchemasController"],
 		beego.ControllerComments{
 			Method:           "HandleFind",
 			Router:           `/`,
@@ -1114,7 +1114,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:SchemasController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:SchemasController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:SchemasController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:SchemasController"],
 		beego.ControllerComments{
 			Method:           "Delete",
 			Router:           `/`,
@@ -1123,7 +1123,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:SchemasController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:SchemasController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:SchemasController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:SchemasController"],
 		beego.ControllerComments{
 			Method:           "Put",
 			Router:           `/`,
@@ -1132,7 +1132,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:SchemasController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:SchemasController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:SchemasController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:SchemasController"],
 		beego.ControllerComments{
 			Method:           "HandleGet",
 			Router:           `/:className`,
@@ -1141,7 +1141,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:SchemasController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:SchemasController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:SchemasController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:SchemasController"],
 		beego.ControllerComments{
 			Method:           "HandleCreate",
 			Router:           `/:className`,
@@ -1150,7 +1150,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:SchemasController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:SchemasController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:SchemasController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:SchemasController"],
 		beego.ControllerComments{
 			Method:           "HandleUpdate",
 			Router:           `/:className`,
@@ -1159,7 +1159,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:SchemasController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:SchemasController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:SchemasController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:SchemasController"],
 		beego.ControllerComments{
 			Method:           "HandleDelete",
 			Router:           `/:className`,
@@ -1168,7 +1168,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:SessionsController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:SessionsController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:SessionsController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:SessionsController"],
 		beego.ControllerComments{
 			Method:           "HandleFind",
 			Router:           `/`,
@@ -1177,7 +1177,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:SessionsController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:SessionsController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:SessionsController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:SessionsController"],
 		beego.ControllerComments{
 			Method:           "Put",
 			Router:           `/`,
@@ -1186,7 +1186,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:SessionsController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:SessionsController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:SessionsController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:SessionsController"],
 		beego.ControllerComments{
 			Method:           "HandleCreate",
 			Router:           `/`,
@@ -1195,7 +1195,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:SessionsController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:SessionsController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:SessionsController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:SessionsController"],
 		beego.ControllerComments{
 			Method:           "Delete",
 			Router:           `/`,
@@ -1204,7 +1204,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:SessionsController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:SessionsController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:SessionsController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:SessionsController"],
 		beego.ControllerComments{
 			Method:           "HandleUpdate",
 			Router:           `/:objectId`,
@@ -1213,7 +1213,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:SessionsController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:SessionsController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:SessionsController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:SessionsController"],
 		beego.ControllerComments{
 			Method:           "HandleDelete",
 			Router:           `/:objectId`,
@@ -1222,7 +1222,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:SessionsController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:SessionsController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:SessionsController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:SessionsController"],
 		beego.ControllerComments{
 			Method:           "HandleGet",
 			Router:           `/:objectId`,
@@ -1231,7 +1231,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:SessionsController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:SessionsController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:SessionsController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:SessionsController"],
 		beego.ControllerComments{
 			Method:           "HandleGetMe",
 			Router:           `/me`,
@@ -1240,7 +1240,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:SessionsController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:SessionsController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:SessionsController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:SessionsController"],
 		beego.ControllerComments{
 			Method:           "HandleUpdateMe",
 			Router:           `/me`,
@@ -1249,7 +1249,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:UpgradeSessionController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:UpgradeSessionController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:UpgradeSessionController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:UpgradeSessionController"],
 		beego.ControllerComments{
 			Method:           "HandleUpdateToRevocableSession",
 			Router:           `/`,
@@ -1258,7 +1258,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:UpgradeSessionController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:UpgradeSessionController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:UpgradeSessionController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:UpgradeSessionController"],
 		beego.ControllerComments{
 			Method:           "Get",
 			Router:           `/`,
@@ -1267,7 +1267,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:UpgradeSessionController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:UpgradeSessionController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:UpgradeSessionController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:UpgradeSessionController"],
 		beego.ControllerComments{
 			Method:           "Delete",
 			Router:           `/`,
@@ -1276,7 +1276,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:UpgradeSessionController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:UpgradeSessionController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:UpgradeSessionController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:UpgradeSessionController"],
 		beego.ControllerComments{
 			Method:           "Put",
 			Router:           `/`,
@@ -1285,7 +1285,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:UsersController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:UsersController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:UsersController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:UsersController"],
 		beego.ControllerComments{
 			Method:           "HandleFind",
 			Router:           `/`,
@@ -1294,7 +1294,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:UsersController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:UsersController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:UsersController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:UsersController"],
 		beego.ControllerComments{
 			Method:           "Delete",
 			Router:           `/`,
@@ -1303,7 +1303,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:UsersController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:UsersController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:UsersController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:UsersController"],
 		beego.ControllerComments{
 			Method:           "HandleCreate",
 			Router:           `/`,
@@ -1312,7 +1312,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:UsersController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:UsersController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:UsersController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:UsersController"],
 		beego.ControllerComments{
 			Method:           "Put",
 			Router:           `/`,
@@ -1321,7 +1321,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:UsersController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:UsersController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:UsersController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:UsersController"],
 		beego.ControllerComments{
 			Method:           "HandleUpdate",
 			Router:           `/:objectId`,
@@ -1330,7 +1330,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:UsersController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:UsersController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:UsersController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:UsersController"],
 		beego.ControllerComments{
 			Method:           "HandleDelete",
 			Router:           `/:objectId`,
@@ -1339,7 +1339,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:UsersController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:UsersController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:UsersController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:UsersController"],
 		beego.ControllerComments{
 			Method:           "HandleGet",
 			Router:           `/:objectId`,
@@ -1348,7 +1348,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:UsersController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:UsersController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:UsersController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:UsersController"],
 		beego.ControllerComments{
 			Method:           "HandleMe",
 			Router:           `/me`,
@@ -1357,7 +1357,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:VerificationController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:VerificationController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:VerificationController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:VerificationController"],
 		beego.ControllerComments{
 			Method:           "HandleVerificationEmailRequest",
 			Router:           `/`,
@@ -1366,7 +1366,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:VerificationController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:VerificationController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:VerificationController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:VerificationController"],
 		beego.ControllerComments{
 			Method:           "Get",
 			Router:           `/`,
@@ -1375,7 +1375,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:VerificationController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:VerificationController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:VerificationController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:VerificationController"],
 		beego.ControllerComments{
 			Method:           "Delete",
 			Router:           `/`,
@@ -1384,7 +1384,7 @@ func init() {
 			Filters:          nil,
 			Params:           nil})
 
-	beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:VerificationController"] = append(beego.GlobalControllerRouter["github.com/freeznet/tomato/controllers:VerificationController"],
+	beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:VerificationController"] = append(beego.GlobalControllerRouter["github.com/JuShangEnergy/framework/controllers:VerificationController"],
 		beego.ControllerComments{
 			Method:           "Put",
 			Router:           `/`,

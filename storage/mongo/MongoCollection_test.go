@@ -5,9 +5,9 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/freeznet/tomato/errs"
-	"github.com/freeznet/tomato/test"
-	"github.com/freeznet/tomato/types"
+	"github.com/JuShangEnergy/framework/errs"
+	"github.com/JuShangEnergy/framework/test"
+	"github.com/JuShangEnergy/framework/types"
 
 	"github.com/globalsign/mgo"
 )

@@ -1,9 +1,9 @@
 package rest
 
 import (
-	"github.com/freeznet/tomato/cloud"
-	"github.com/freeznet/tomato/types"
-	"github.com/freeznet/tomato/utils"
+	"github.com/JuShangEnergy/framework/cloud"
+	"github.com/JuShangEnergy/framework/types"
+	"github.com/JuShangEnergy/framework/utils"
 )
 
 func getRequest(triggerType string, auth *Auth, parseObject, originalParseObject types.M) cloud.TriggerRequest {

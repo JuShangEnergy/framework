@@ -12,9 +12,9 @@ import (
 	"bytes"
 	"regexp"
 
-	"github.com/freeznet/tomato/errs"
-	"github.com/freeznet/tomato/types"
-	"github.com/freeznet/tomato/utils"
+	"github.com/JuShangEnergy/framework/errs"
+	"github.com/JuShangEnergy/framework/types"
+	"github.com/JuShangEnergy/framework/utils"
 	"github.com/lib/pq"
 	"reflect"
 )
@@ -301,7 +301,7 @@ func (p *PostgresAdapter) AddFieldIfNotExists(className, fieldName string, field
 	return tx.Commit()
 }
 
-//allowed modify the table "_SCHEMA"
+// allowed modify the table "_SCHEMA"
 func (p *PostgresAdapter) UpdateFields(className string, schema types.M) error {
 
 	tx, err := p.db.Begin()

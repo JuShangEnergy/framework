@@ -4,8 +4,8 @@ import (
 	"errors"
 	"net/url"
 
-	"github.com/freeznet/tomato/config"
-	"github.com/freeznet/tomato/storage"
+	"github.com/JuShangEnergy/framework/config"
+	"github.com/JuShangEnergy/framework/storage"
 	"github.com/globalsign/mgo"
 )
 

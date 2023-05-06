@@ -1,8 +1,8 @@
 package files
 
 import (
-	"github.com/freeznet/tomato/cloud"
-	"github.com/freeznet/tomato/types"
+	"github.com/JuShangEnergy/framework/cloud"
+	"github.com/JuShangEnergy/framework/types"
 )
 
 func getRequest(triggerType string, orifilename string, data []byte, contentType string, filename string, location string, user types.M, info *types.RequestInfo) cloud.TriggerRequest {
@@ -10,7 +10,7 @@ func getRequest(triggerType string, orifilename string, data []byte, contentType
 		TriggerName: triggerType,
 		Object:      nil,
 		Master:      false,
-		Headers:	 info.Headers,
+		Headers:     info.Headers,
 	}
 
 	if filename != "" {
@@ -41,7 +41,6 @@ func getResponse(request cloud.TriggerRequest) *cloud.TriggerResponse {
 	}
 	return response
 }
-
 
 func maybeRunTrigger(triggerType string, className string, orifilename string, data []byte, contentType string, user types.M, info *types.RequestInfo) (types.M, error) {
 	if data == nil {

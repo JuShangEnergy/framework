@@ -6,12 +6,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/freeznet/tomato/cache"
-	"github.com/freeznet/tomato/errs"
-	"github.com/freeznet/tomato/storage"
-	"github.com/freeznet/tomato/storage/mongo"
-	"github.com/freeznet/tomato/test"
-	"github.com/freeznet/tomato/types"
+	"github.com/JuShangEnergy/framework/cache"
+	"github.com/JuShangEnergy/framework/errs"
+	"github.com/JuShangEnergy/framework/storage"
+	"github.com/JuShangEnergy/framework/storage/mongo"
+	"github.com/JuShangEnergy/framework/test"
+	"github.com/JuShangEnergy/framework/types"
 )
 
 func Test_AddClassIfNotExists(t *testing.T) {

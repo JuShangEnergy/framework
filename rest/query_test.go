@@ -4,14 +4,14 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/freeznet/tomato/cache"
-	"github.com/freeznet/tomato/config"
-	"github.com/freeznet/tomato/errs"
-	"github.com/freeznet/tomato/orm"
-	"github.com/freeznet/tomato/storage"
-	"github.com/freeznet/tomato/storage/mongo"
-	"github.com/freeznet/tomato/test"
-	"github.com/freeznet/tomato/types"
+	"github.com/JuShangEnergy/framework/cache"
+	"github.com/JuShangEnergy/framework/config"
+	"github.com/JuShangEnergy/framework/errs"
+	"github.com/JuShangEnergy/framework/orm"
+	"github.com/JuShangEnergy/framework/storage"
+	"github.com/JuShangEnergy/framework/storage/mongo"
+	"github.com/JuShangEnergy/framework/test"
+	"github.com/JuShangEnergy/framework/types"
 )
 
 func Test_Execute(t *testing.T) {
@@ -4507,7 +4507,7 @@ func Test_fullTextSearch(t *testing.T) {
 	order := types.M{"$score": -1}
 	keys := []string{"$score"}
 	result, err = orm.TomatoDBController.Find(className, where, types.M{"sort": order, "keys": keys})
-	if err != nil || len(result) != 3 || result[0].(types.M)["score"] == nil || result[1].(types.M)["score"] == nil || result[2].(types.M)["score"] == nil  {
+	if err != nil || len(result) != 3 || result[0].(types.M)["score"] == nil || result[1].(types.M)["score"] == nil || result[2].(types.M)["score"] == nil {
 		t.Error("fullTextSearch: $search, sort", "expect", 3, "result", len(result), result)
 	}
 
@@ -4515,7 +4515,7 @@ func Test_fullTextSearch(t *testing.T) {
 		"subject": types.M{
 			"$text": types.M{
 				"$search": types.M{
-					"$term": "leche",
+					"$term":     "leche",
 					"$language": "spanish",
 				},
 			},
@@ -4530,7 +4530,7 @@ func Test_fullTextSearch(t *testing.T) {
 		"subject": types.M{
 			"$text": types.M{
 				"$search": types.M{
-					"$term": "CAFÉ",
+					"$term":               "CAFÉ",
 					"$diacriticSensitive": true,
 				},
 			},
@@ -4558,7 +4558,7 @@ func Test_fullTextSearch(t *testing.T) {
 		"subject": types.M{
 			"$text": types.M{
 				"$search": types.M{
-					"$term": "leche",
+					"$term":     "leche",
 					"$language": true,
 				},
 			},
@@ -4574,7 +4574,7 @@ func Test_fullTextSearch(t *testing.T) {
 		"subject": types.M{
 			"$text": types.M{
 				"$search": types.M{
-					"$term": "Coffee",
+					"$term":          "Coffee",
 					"$caseSensitive": "string",
 				},
 			},
@@ -4590,7 +4590,7 @@ func Test_fullTextSearch(t *testing.T) {
 		"subject": types.M{
 			"$text": types.M{
 				"$search": types.M{
-					"$term": "CAFÉ",
+					"$term":               "CAFÉ",
 					"$diacriticSensitive": "string",
 				},
 			},

@@ -1,10 +1,10 @@
 package tomato
 
 import (
-	"github.com/freeznet/tomato/orm"
-	"github.com/freeznet/tomato/storage"
-	"github.com/freeznet/tomato/storage/postgres"
-	"github.com/freeznet/tomato/test"
+	"github.com/JuShangEnergy/framework/orm"
+	"github.com/JuShangEnergy/framework/storage"
+	"github.com/JuShangEnergy/framework/storage/postgres"
+	"github.com/JuShangEnergy/framework/test"
 	"testing"
 )
 

@@ -1,11 +1,11 @@
 package hooks
 
 import (
-	"github.com/freeznet/tomato/cloud"
-	"github.com/freeznet/tomato/errs"
-	"github.com/freeznet/tomato/orm"
-	"github.com/freeznet/tomato/types"
-	"github.com/freeznet/tomato/utils"
+	"github.com/JuShangEnergy/framework/cloud"
+	"github.com/JuShangEnergy/framework/errs"
+	"github.com/JuShangEnergy/framework/orm"
+	"github.com/JuShangEnergy/framework/types"
+	"github.com/JuShangEnergy/framework/utils"
 )
 
 const defaultHooksCollectionName = "_Hooks"

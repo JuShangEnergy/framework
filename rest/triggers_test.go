@@ -1,14 +1,14 @@
 package rest
 
 import (
-	"github.com/freeznet/tomato/orm"
+	"github.com/JuShangEnergy/framework/orm"
 	"reflect"
 	"testing"
 
-	"github.com/freeznet/tomato/cloud"
-	"github.com/freeznet/tomato/errs"
-	"github.com/freeznet/tomato/types"
-	"github.com/freeznet/tomato/utils"
+	"github.com/JuShangEnergy/framework/cloud"
+	"github.com/JuShangEnergy/framework/errs"
+	"github.com/JuShangEnergy/framework/types"
+	"github.com/JuShangEnergy/framework/utils"
 )
 
 func Test_maybeRunTrigger(t *testing.T) {
@@ -44,13 +44,13 @@ func Test_maybeRunTrigger(t *testing.T) {
 	cloud.UnregisterAll()
 }
 
-func Test_maybeRunTriggerHeader(t *testing.T)  {
+func Test_maybeRunTriggerHeader(t *testing.T) {
 	var err error
 	var expectErr error
 	/****************************************************************************************/
 	headers := map[string]string{
 		"Connection": "keep-alive",
-		"Host": "www.cn",
+		"Host":       "www.cn",
 	}
 	cloud.BeforeSave("user", func(request cloud.TriggerRequest, response cloud.Response) {
 		object := request.Object
@@ -77,7 +77,7 @@ func Test_maybeRunTriggerHeader(t *testing.T)  {
 	cloud.UnregisterAll()
 }
 
-func Test_maybeRunTriggerHeaderGet(t *testing.T)  {
+func Test_maybeRunTriggerHeaderGet(t *testing.T) {
 	var object, schema types.M
 	var className string
 	var err error
@@ -87,17 +87,17 @@ func Test_maybeRunTriggerHeaderGet(t *testing.T)  {
 	schema = types.M{
 		"fields": types.M{
 			"objectId": types.M{"type": "String"},
-			"key": types.M{"type": "String"},
+			"key":      types.M{"type": "String"},
 		},
 	}
 	orm.Adapter.CreateClass(className, schema)
 	object = types.M{
 		"objectId": "01",
-		"key": "hello",
+		"key":      "hello",
 	}
 	headers := map[string]string{
 		"Connection": "keep-alive",
-		"Host": "www.cn",
+		"Host":       "www.cn",
 	}
 	info := &types.RequestInfo{
 		Headers: headers,

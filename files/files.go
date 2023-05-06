@@ -1,10 +1,10 @@
 package files
 
 import (
-	"github.com/freeznet/tomato/cloud"
-	"github.com/freeznet/tomato/config"
-	"github.com/freeznet/tomato/types"
-	"github.com/freeznet/tomato/utils"
+	"github.com/JuShangEnergy/framework/cloud"
+	"github.com/JuShangEnergy/framework/config"
+	"github.com/JuShangEnergy/framework/types"
+	"github.com/JuShangEnergy/framework/utils"
 )
 
 var adapter filesAdapter
@@ -96,11 +96,12 @@ func DeleteFile(filename string) error {
 
 // ExpandFilesInObject 展开文件对象
 // 展开之后的文件对象如下
-// {
-// 	"__type": "File",
-// 	"url": "http://example.com/pic.jpg",
-// 	"name": "pic.jpg",
-// }
+//
+//	{
+//		"__type": "File",
+//		"url": "http://example.com/pic.jpg",
+//		"name": "pic.jpg",
+//	}
 func ExpandFilesInObject(object interface{}) {
 	if object == nil {
 		return

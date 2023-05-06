@@ -1,8 +1,8 @@
 package server
 
 import (
-	"github.com/freeznet/tomato/dependencies/lru"
-	"github.com/freeznet/tomato/livequery/utils"
+	"github.com/JuShangEnergy/framework/dependencies/lru"
+	"github.com/JuShangEnergy/framework/livequery/utils"
 )
 
 // SessionTokenCache 缓存 SessionToken 及其对应的用户 ID

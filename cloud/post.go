@@ -6,17 +6,18 @@ import (
 	"io/ioutil"
 	"net/http"
 
-	"github.com/freeznet/tomato/config"
-	"github.com/freeznet/tomato/types"
-	"github.com/freeznet/tomato/utils"
+	"github.com/JuShangEnergy/framework/config"
+	"github.com/JuShangEnergy/framework/types"
+	"github.com/JuShangEnergy/framework/utils"
 )
 
 // post 请求网络接口
 // 接口返回格式如下：
-// {
-// 	"success":{},
-// 	"error":{},
-// }
+//
+//	{
+//		"success":{},
+//		"error":{},
+//	}
 func post(params types.M, URL string) (r types.M, e types.M) {
 	jsonParams, err := json.Marshal(params)
 	if err != nil {

@@ -1,12 +1,12 @@
 package controllers
 
 import (
-	"github.com/freeznet/tomato/errs"
+	"github.com/JuShangEnergy/framework/errs"
 	"strings"
 
-	"github.com/freeznet/tomato/orm"
-	"github.com/freeznet/tomato/types"
-	"github.com/freeznet/tomato/utils"
+	"github.com/JuShangEnergy/framework/orm"
+	"github.com/JuShangEnergy/framework/types"
+	"github.com/JuShangEnergy/framework/utils"
 )
 
 // GlobalConfigController 处理 /config 接口的请求

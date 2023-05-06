@@ -6,11 +6,11 @@ import (
 	"sync"
 
 	"fmt"
-	"github.com/freeznet/tomato/cache"
-	"github.com/freeznet/tomato/errs"
-	"github.com/freeznet/tomato/storage"
-	"github.com/freeznet/tomato/types"
-	"github.com/freeznet/tomato/utils"
+	"github.com/JuShangEnergy/framework/cache"
+	"github.com/JuShangEnergy/framework/errs"
+	"github.com/JuShangEnergy/framework/storage"
+	"github.com/JuShangEnergy/framework/types"
+	"github.com/JuShangEnergy/framework/utils"
 )
 
 // clpValidKeys 类级别的权限 列表
@@ -996,16 +996,17 @@ func fieldTypeIsInvalid(t types.M) error {
 
 // validateCLP 校验类级别权限
 // 正常的 perms 格式如下
-// {
-// 	"get":{
-// 		"user24id":true,
-// 		"role:xxx":true,
-// 		"*":true,
-// 	},
-// 	"delete":{...},
-//  "readUserFields":{"aaa","bbb"}
-// 	...
-// }
+//
+//	{
+//		"get":{
+//			"user24id":true,
+//			"role:xxx":true,
+//			"*":true,
+//		},
+//		"delete":{...},
+//	 "readUserFields":{"aaa","bbb"}
+//		...
+//	}
 func validateCLP(perms types.M, fields types.M) error {
 	if perms == nil {
 		return nil
@@ -1243,18 +1244,21 @@ func injectDefaultSchema(schema types.M) types.M {
 }
 
 // convertSchemaToAdapterSchema 转换 schema 为 Adapter 使用的类型：添加默认字段，删除不必要的字段
-// {
-// 	ACL:{type:ACL}
-// 	password:{type:string}
-// 	key:{type:string}
-// }
+//
+//	{
+//		ACL:{type:ACL}
+//		password:{type:string}
+//		key:{type:string}
+//	}
+//
 // ==>
-// {
-// 	key:{type:string}
-// 	_rperm:{type:Array}
-// 	_wperm:{type:Array}
-// 	_hashed_password:{type:string}
-// }
+//
+//	{
+//		key:{type:string}
+//		_rperm:{type:Array}
+//		_wperm:{type:Array}
+//		_hashed_password:{type:string}
+//	}
 func convertSchemaToAdapterSchema(schema types.M) types.M {
 	if schema == nil {
 		return schema
@@ -1274,18 +1278,21 @@ func convertSchemaToAdapterSchema(schema types.M) types.M {
 }
 
 // convertAdapterSchemaToParseSchema 转换 Adapter 中使用的 schema 为普通类型
-// {
-// 	key:{type:string}
-// 	_rperm:{type:Array}
-// 	_wperm:{type:Array}
-// 	_hashed_password:{type:string}
-// }
+//
+//	{
+//		key:{type:string}
+//		_rperm:{type:Array}
+//		_wperm:{type:Array}
+//		_hashed_password:{type:string}
+//	}
+//
 // ==>
-// {
-// 	ACL:{type:ACL}
-// 	password:{type:string}
-// 	key:{type:string}
-// }
+//
+//	{
+//		ACL:{type:ACL}
+//		password:{type:string}
+//		key:{type:string}
+//	}
 func convertAdapterSchemaToParseSchema(schema types.M) types.M {
 	if schema == nil {
 		return schema

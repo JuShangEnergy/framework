@@ -3,8 +3,8 @@ package pubsub
 import (
 	"encoding/json"
 
-	"github.com/freeznet/tomato/livequery/server"
-	"github.com/freeznet/tomato/livequery/t"
+	"github.com/JuShangEnergy/framework/livequery/server"
+	"github.com/JuShangEnergy/framework/livequery/t"
 )
 
 // CloudCodePublisher 云代码发布者，当前支持发布 afterSave 与 afterDelete 通知
@@ -31,10 +31,11 @@ func (c *CloudCodePublisher) OnCloudCodeAfterDelete(request t.M) {
 
 // onCloudCodeMessage 向发送者发送通知消息
 // 组装之后的 message 为 JSON 格式：
-// {
-// 	"currentParseObject": {...},
-// 	"originalParseObject": {...}
-// }
+//
+//	{
+//		"currentParseObject": {...},
+//		"originalParseObject": {...}
+//	}
 func (c *CloudCodePublisher) onCloudCodeMessage(messageType string, request t.M) {
 	message := t.M{
 		"currentParseObject": request["object"],

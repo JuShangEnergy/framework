@@ -5,12 +5,12 @@ import (
 	"testing"
 	"time"
 
-	"github.com/freeznet/tomato/config"
-	"github.com/freeznet/tomato/errs"
-	"github.com/freeznet/tomato/mail"
-	"github.com/freeznet/tomato/orm"
-	"github.com/freeznet/tomato/types"
-	"github.com/freeznet/tomato/utils"
+	"github.com/JuShangEnergy/framework/config"
+	"github.com/JuShangEnergy/framework/errs"
+	"github.com/JuShangEnergy/framework/mail"
+	"github.com/JuShangEnergy/framework/orm"
+	"github.com/JuShangEnergy/framework/types"
+	"github.com/JuShangEnergy/framework/utils"
 )
 
 func Test_SetEmailVerifyToken(t *testing.T) {

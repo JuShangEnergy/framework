@@ -1,8 +1,8 @@
 package controllers
 
 import (
-	"github.com/astaxie/beego"
-	"github.com/freeznet/tomato/types"
+	"github.com/JuShangEnergy/framework/types"
+	"github.com/beego/beego"
 )
 
 // HealthController 检测服务器健康状态

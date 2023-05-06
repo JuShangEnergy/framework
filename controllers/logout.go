@@ -1,9 +1,9 @@
 package controllers
 
 import (
-	"github.com/freeznet/tomato/rest"
-	"github.com/freeznet/tomato/types"
-	"github.com/freeznet/tomato/utils"
+	"github.com/JuShangEnergy/framework/rest"
+	"github.com/JuShangEnergy/framework/types"
+	"github.com/JuShangEnergy/framework/utils"
 )
 
 // LogoutController 处理 /logout 接口的请求

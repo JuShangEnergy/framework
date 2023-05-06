@@ -1,10 +1,10 @@
 package auth
 
 import (
-	"github.com/freeznet/tomato/errs"
-	"github.com/freeznet/tomato/types"
-	"github.com/freeznet/tomato/utils"
 	"fmt"
+	"github.com/JuShangEnergy/framework/errs"
+	"github.com/JuShangEnergy/framework/types"
+	"github.com/JuShangEnergy/framework/utils"
 )
 
 type weapp struct{}
@@ -12,7 +12,7 @@ type weapp struct{}
 func (a weapp) ValidateAuthData(authData types.M, options types.M) error {
 	// 具体接口参考： https://developers.weixin.qq.com/miniprogram/dev/api/api-login.html#wxloginobject
 	host := "https://api.weixin.qq.com/sns/"
-	path := "jscode2session?appid=" + utils.S(options["appid"]) + "&secret=" + utils.S(options["secret"])+ "&js_code=" + utils.S(authData["js_code"])+ "&grant_type=authorization_code"
+	path := "jscode2session?appid=" + utils.S(options["appid"]) + "&secret=" + utils.S(options["secret"]) + "&js_code=" + utils.S(authData["js_code"]) + "&grant_type=authorization_code"
 	fmt.Println(path)
 	data, err := request(host+path, nil)
 	if err != nil {
@@ -25,4 +25,3 @@ func (a weapp) ValidateAuthData(authData types.M, options types.M) error {
 	}
 	return errs.E(errs.ObjectNotFound, "Weixin Weapp auth is invalid for this user.")
 }
-

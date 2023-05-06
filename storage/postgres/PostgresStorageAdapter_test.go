@@ -8,8 +8,8 @@ import (
 	"time"
 
 	"fmt"
-	"github.com/freeznet/tomato/errs"
-	"github.com/freeznet/tomato/types"
+	"github.com/JuShangEnergy/framework/errs"
+	"github.com/JuShangEnergy/framework/types"
 )
 
 func Test_parseTypeToPostgresType(t *testing.T) {
@@ -2190,78 +2190,75 @@ func TestPostgresAdapter_CreateClass(t *testing.T) {
 	}
 }
 
-
-func Test_UpdateFields(t *testing.T){
+func Test_UpdateFields(t *testing.T) {
 	//open database
 	db := openDB()
-	p := NewPostgresAdapter("tomato", db);
-	p.ensureSchemaCollectionExists();
+	p := NewPostgresAdapter("tomato", db)
+	p.ensureSchemaCollectionExists()
 
 	//create the test case
-	test := []struct{
-		name string;
-		arg types.M;
-		want types.M;
+	test := []struct {
+		name string
+		arg  types.M
+		want types.M
 	}{
 		{
-			name:"test1",
-			arg:types.M{
-				"className":"test1",
-				"schema": "cccc",
-				"isParseClass":true,
+			name: "test1",
+			arg: types.M{
+				"className":    "test1",
+				"schema":       "cccc",
+				"isParseClass": true,
 			},
-			want:nil,
+			want: nil,
 		}, {
-			name:"test2",
-			arg:types.M{
-				"className":"test2",
+			name: "test2",
+			arg: types.M{
+				"className": "test2",
 				"schema": types.M{
-					"type":"String",
+					"type": "String",
 				},
-				"isParseClass":true,
+				"isParseClass": true,
 			},
-			want:nil,
-		},{
-			name:"test3",
-			arg:types.M{
-				"className":"test3",
+			want: nil,
+		}, {
+			name: "test3",
+			arg: types.M{
+				"className": "test3",
 				"schema": types.M{
-					"type":"String",
-					"subName":"ccc",
+					"type":    "String",
+					"subName": "ccc",
 				},
-				"isParseClass":true,
+				"isParseClass": true,
 			},
-			want:nil,
-		},{
-			name:"test4",
-			arg:types.M{
-				"className":"notExist",
+			want: nil,
+		}, {
+			name: "test4",
+			arg: types.M{
+				"className": "notExist",
 				"schema": types.M{
-					"type":"String",
-					"subName":"ccc",
+					"type":    "String",
+					"subName": "ccc",
 				},
-				"isParseClass":true,
+				"isParseClass": true,
 			},
-			want:nil,
+			want: nil,
 		},
 	}
 
+	for _, tt := range test {
+		p.CreateClass(tt.name, nil)
 
-	for _, tt := range test{
-		p.CreateClass(tt.name,nil);
+		err := p.UpdateFields(tt.name, tt.arg)
 
-		err := p.UpdateFields(tt.name, tt.arg);
-
-		fmt.Println(err);
+		fmt.Println(err)
 		if reflect.DeepEqual(err, tt.want) {
-			t.Errorf("%q. PostgresAdapter.PerformInitialization() error = %v, wantErr %v", tt.name, err, tt.want);
+			t.Errorf("%q. PostgresAdapter.PerformInitialization() error = %v, wantErr %v", tt.name, err, tt.want)
 		}
 
-		p.DeleteClass(tt.name);
+		p.DeleteClass(tt.name)
 	}
-	db.Close();
+	db.Close()
 }
-
 
 func TestPostgresAdapter_PerformInitialization(t *testing.T) {
 	db := openDB()
@@ -3162,17 +3159,17 @@ func TestPostgresAdapter_Find(t *testing.T) {
 				},
 				options: types.M{},
 				dataObjects: []types.M{
-					types.M{"key": types.M{"__type": "Polygon", "coordinates": types.S{types.S{0, 0}, types.S{0, 1}, types.S{1, 1},types.S{1, 0}}}},
-					types.M{"key": types.M{"__type": "Polygon", "coordinates": types.S{types.S{0, 0}, types.S{0, 2}, types.S{2, 2},types.S{2, 0}}}},
-					types.M{"key": types.M{"__type": "Polygon", "coordinates": types.S{types.S{10, 10}, types.S{10, 15}, types.S{15, 15},types.S{15, 10}, types.S{10, 10}}}},
+					types.M{"key": types.M{"__type": "Polygon", "coordinates": types.S{types.S{0, 0}, types.S{0, 1}, types.S{1, 1}, types.S{1, 0}}}},
+					types.M{"key": types.M{"__type": "Polygon", "coordinates": types.S{types.S{0, 0}, types.S{0, 2}, types.S{2, 2}, types.S{2, 0}}}},
+					types.M{"key": types.M{"__type": "Polygon", "coordinates": types.S{types.S{10, 10}, types.S{10, 15}, types.S{15, 15}, types.S{15, 10}, types.S{10, 10}}}},
 				},
 			},
 			want: []types.M{
-				types.M{"key": types.M{"__type": "Polygon", "coordinates": types.S{types.S{10, 10}, types.S{10, 15}, types.S{15, 15},types.S{15, 10}, types.S{10, 10}}}},
+				types.M{"key": types.M{"__type": "Polygon", "coordinates": types.S{types.S{10, 10}, types.S{10, 15}, types.S{15, 15}, types.S{15, 10}, types.S{10, 10}}}},
 			},
-			wantErr: nil,
+			wantErr:    nil,
 			initialize: initialize,
-			clean: clean,
+			clean:      clean,
 		},
 		{
 			name: "1",
@@ -6205,7 +6202,7 @@ func TestPostgresAdapter_RawQuery1(t *testing.T) {
 	db := openDB()
 	p := NewPostgresAdapter("", db)
 	sql := `select *from "MeterData" where "serialNumber"=$1 and "createdAt" between $2 and $3 order by "createdAt" desc  `
-	result, err := p.RawQuery(sql,  "222","2018-07-10 10:02:00" ,"2018-07-10 10:10:00" )
+	result, err := p.RawQuery(sql, "222", "2018-07-10 10:02:00", "2018-07-10 10:10:00")
 	if err != nil {
 		log.Println(err)
 	}
@@ -6232,7 +6229,7 @@ GROUP BY
 	"order".goods_size,
 	goods_name
 ORDER BY order_count`
-	result, err := p.RawQuery(sql,  "2018-04-20 10:02:00", "2018-05-20 10:10:00")
+	result, err := p.RawQuery(sql, "2018-04-20 10:02:00", "2018-05-20 10:10:00")
 	if err != nil {
 		log.Println(err)
 	}
@@ -6242,26 +6239,26 @@ func TestPostgresAdapter_RawBatchInsert(t *testing.T) {
 	db := openDB()
 	p := NewPostgresAdapter("", db)
 	var values = [][]interface{}{
-		{ "a", "aa","{role:Guest}"},
-		{ "b", "bb",nil},
-		{ "c", "cc",nil},
+		{"a", "aa", "{role:Guest}"},
+		{"b", "bb", nil},
+		{"c", "cc", nil},
 	}
-	err := p.RawBatchInsert("Test", values, []string{"serialNumber", "hardVersion","_rperm"})
+	err := p.RawBatchInsert("Test", values, []string{"serialNumber", "hardVersion", "_rperm"})
 	if err != nil {
 		log.Println(err)
 	}
 	var values2 = [][]interface{}{
-		{ "a", "aa","{role:Guest}",nil},
-		{ "b", "bb",nil,"{role:Guest}"},
-		{ "c", "cc","{role:Guest}","{role:Guest}"},
+		{"a", "aa", "{role:Guest}", nil},
+		{"b", "bb", nil, "{role:Guest}"},
+		{"c", "cc", "{role:Guest}", "{role:Guest}"},
 	}
-	err = p.RawBatchInsert("Test", values2, []string{"serialNumber", "hardVersion","_rperm","_wperm"})
+	err = p.RawBatchInsert("Test", values2, []string{"serialNumber", "hardVersion", "_rperm", "_wperm"})
 	if err != nil {
 		fmt.Println(err)
 	}
 }
 
-func TestPostgresAdapter_ContainedAllInNull(t *testing.T)  {
+func TestPostgresAdapter_ContainedAllInNull(t *testing.T) {
 	db := openDB()
 	p := NewPostgresAdapter("", db)
 	initialize := func(className string, schema types.M, objects []types.M) {
@@ -6275,10 +6272,10 @@ func TestPostgresAdapter_ContainedAllInNull(t *testing.T)  {
 		db.Exec(`DROP TABLE "_SCHEMA"`)
 	}
 	type args struct {
-		className 	string
-		schema 		types.M
-		query 		types.M
-		options 	types.M
+		className   string
+		schema      types.M
+		query       types.M
+		options     types.M
 		dataObjects []types.M
 	}
 	tests := []struct {
@@ -6300,7 +6297,7 @@ func TestPostgresAdapter_ContainedAllInNull(t *testing.T)  {
 						"key2": types.M{"type": "String"},
 					},
 				},
-				query:   types.M{"key": types.M{"$in": types.S{"hello", "hi", "", nil}},},
+				query:   types.M{"key": types.M{"$in": types.S{"hello", "hi", "", nil}}},
 				options: types.M{},
 				dataObjects: []types.M{
 					types.M{"key": "hello", "key2": "world"},
@@ -6324,7 +6321,7 @@ func TestPostgresAdapter_ContainedAllInNull(t *testing.T)  {
 				schema: types.M{
 					"className": "post",
 					"fields": types.M{
-						"key":  types.M{"type": "Object"},
+						"key": types.M{"type": "Object"},
 					},
 				},
 				query:   types.M{"key.group": types.M{"$in": types.S{"A"}}},
@@ -6350,7 +6347,7 @@ func TestPostgresAdapter_ContainedAllInNull(t *testing.T)  {
 				schema: types.M{
 					"className": "post",
 					"fields": types.M{
-						"key":  types.M{"type": "Object"},
+						"key": types.M{"type": "Object"},
 					},
 				},
 				query:   types.M{"key.group": types.M{"$in": types.S{1}}},
@@ -6376,7 +6373,7 @@ func TestPostgresAdapter_ContainedAllInNull(t *testing.T)  {
 				schema: types.M{
 					"className": "post",
 					"fields": types.M{
-						"key":  types.M{"type": "Object"},
+						"key": types.M{"type": "Object"},
 					},
 				},
 				query:   types.M{"key.group": types.M{"$regex": "A"}},

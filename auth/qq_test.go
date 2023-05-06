@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	"github.com/freeznet/tomato/types"
+	"github.com/JuShangEnergy/framework/types"
 )
 
 func Test_qq_ValidateAuthData(t *testing.T) {

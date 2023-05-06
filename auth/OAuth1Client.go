@@ -13,8 +13,8 @@ import (
 	"strings"
 	"time"
 
-	"github.com/freeznet/tomato/types"
-	"github.com/freeznet/tomato/utils"
+	"github.com/JuShangEnergy/framework/types"
+	"github.com/JuShangEnergy/framework/utils"
 )
 
 const signatureMethod = "HMAC-SHA1"

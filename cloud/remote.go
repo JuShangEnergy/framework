@@ -1,6 +1,6 @@
 package cloud
 
-import "github.com/freeznet/tomato/types"
+import "github.com/JuShangEnergy/framework/types"
 
 // RemoteDefine ...
 func RemoteDefine(functionName string, functionHandlerURL, validatorHandlerURL string) {

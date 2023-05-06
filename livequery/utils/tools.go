@@ -7,7 +7,7 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/freeznet/tomato/livequery/t"
+	"github.com/JuShangEnergy/framework/livequery/t"
 )
 
 // QueryHash 计算 query 的 hash

@@ -1,4 +1,4 @@
-//Package orm 数据库操作模块，当前只对接了 MongoDB
+// Package orm 数据库操作模块，当前只对接了 MongoDB
 package orm
 
 import (
@@ -6,14 +6,14 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/freeznet/tomato/cache"
-	"github.com/freeznet/tomato/config"
-	"github.com/freeznet/tomato/errs"
-	"github.com/freeznet/tomato/storage"
-	"github.com/freeznet/tomato/storage/mongo"
-	"github.com/freeznet/tomato/storage/postgres"
-	"github.com/freeznet/tomato/types"
-	"github.com/freeznet/tomato/utils"
+	"github.com/JuShangEnergy/framework/cache"
+	"github.com/JuShangEnergy/framework/config"
+	"github.com/JuShangEnergy/framework/errs"
+	"github.com/JuShangEnergy/framework/storage"
+	"github.com/JuShangEnergy/framework/storage/mongo"
+	"github.com/JuShangEnergy/framework/storage/postgres"
+	"github.com/JuShangEnergy/framework/types"
+	"github.com/JuShangEnergy/framework/utils"
 	"reflect"
 )
 
@@ -793,27 +793,31 @@ func (d *DBController) CreateIndex(className string, indexRequest []string) erro
 
 // reduceRelationKeys 处理查询条件中的 $relatedTo
 // query 格式如下
-// {
-//     "$relatedTo":{
-//         "object":{
-//             "__type":"Pointer",
-//             "className":"Post",
-//             "objectId":"8TOXdXf3tz"
-//         },
-//         "key":"likes"
-//     }
-// }
+//
+//	{
+//	    "$relatedTo":{
+//	        "object":{
+//	            "__type":"Pointer",
+//	            "className":"Post",
+//	            "objectId":"8TOXdXf3tz"
+//	        },
+//	        "key":"likes"
+//	    }
+//	}
+//
 // 表 Post 中的字段 likes 的类型为 relation<classA>
 // 从 _Join:likes:Post 表中查询 Post id 对应的 classA id 列表，并添加到 query 中
 // 替换后格式为
-// {
-//     "objectId":{
-//         "$in":[
-//             "id",
-//             "id2"
-//         ]
-//     }
-// }
+//
+//	{
+//	    "objectId":{
+//	        "$in":[
+//	            "id",
+//	            "id2"
+//	        ]
+//	    }
+//	}
+//
 // 已知父对象，查找子对象
 func (d *DBController) reduceRelationKeys(className string, query types.M) types.M {
 	if query == nil {
@@ -1525,26 +1529,29 @@ func validateQuery(query types.M) error {
 }
 
 // transformObjectACL 转换对象中的 ACL 字段
-// {
-// 	"ACL":{
-// 		"userid":{
-// 			"read":true,
-// 			"write":true
-// 		},
-// 		"role:xxx":{
-// 			"read":true,
-// 			"write":true
-// 		}
-// 		"*":{
-// 			"read":true
-// 		}
-// 	}
-// }
+//
+//	{
+//		"ACL":{
+//			"userid":{
+//				"read":true,
+//				"write":true
+//			},
+//			"role:xxx":{
+//				"read":true,
+//				"write":true
+//			}
+//			"*":{
+//				"read":true
+//			}
+//		}
+//	}
+//
 // ==>
-// {
-// 	"_rperm":["userid","role:xxx","*"],
-// 	"_wperm":["userid","role:xxx"],
-// }
+//
+//	{
+//		"_rperm":["userid","role:xxx","*"],
+//		"_wperm":["userid","role:xxx"],
+//	}
 func transformObjectACL(result types.M) types.M {
 	if result == nil {
 		return result
@@ -1580,26 +1587,29 @@ func transformObjectACL(result types.M) types.M {
 }
 
 // untransformObjectACL 把数据库格式的 ACL 转换为 API 格式
-// {
-// 	"_rperm":["userid","role:xxx","*"],
-// 	"_wperm":["userid","role:xxx"]
-// }
+//
+//	{
+//		"_rperm":["userid","role:xxx","*"],
+//		"_wperm":["userid","role:xxx"]
+//	}
+//
 // ==>
-// {
-// 	"ACL":{
-// 		"userid":{
-// 			"read":true,
-// 			"write":true
-// 		},
-// 		"role:xxx":{
-// 			"read":true,
-// 			"write":true
-// 		}
-// 		"*":{
-// 			"read":true
-// 		}
-// 	}
-// }
+//
+//	{
+//		"ACL":{
+//			"userid":{
+//				"read":true,
+//				"write":true
+//			},
+//			"role:xxx":{
+//				"read":true,
+//				"write":true
+//			}
+//			"*":{
+//				"read":true
+//			}
+//		}
+//	}
 func untransformObjectACL(output types.M) types.M {
 	if output == nil {
 		return output
@@ -1652,15 +1662,18 @@ func untransformObjectACL(output types.M) types.M {
 }
 
 // transformAuthData 转换第三方登录数据
-// {
-// 	"authData": {
-// 		"facebook": {...}
-// 	}
-// }
+//
+//	{
+//		"authData": {
+//			"facebook": {...}
+//		}
+//	}
+//
 // ==>
-// {
-// 	"_auth_data_facebook": {...}
-// }
+//
+//	{
+//		"_auth_data_facebook": {...}
+//	}
 func transformAuthData(className string, object, schema types.M) {
 	if className == "_User" && object != nil {
 		if _, ok := object["authData"]; ok == false {

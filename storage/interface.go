@@ -1,6 +1,6 @@
 package storage
 
-import "github.com/freeznet/tomato/types"
+import "github.com/JuShangEnergy/framework/types"
 
 // Adapter 数据库操作适配器接口
 type Adapter interface {

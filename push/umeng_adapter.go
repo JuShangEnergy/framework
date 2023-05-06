@@ -2,10 +2,10 @@ package push
 
 import (
 	"fmt"
-	"github.com/freeznet/tomato/config"
-	"github.com/freeznet/tomato/push/umeng"
-	"github.com/freeznet/tomato/types"
-	"github.com/freeznet/tomato/utils"
+	"github.com/JuShangEnergy/framework/config"
+	"github.com/JuShangEnergy/framework/push/umeng"
+	"github.com/JuShangEnergy/framework/types"
+	"github.com/JuShangEnergy/framework/utils"
 	"github.com/pkg/errors"
 	"strings"
 	"time"

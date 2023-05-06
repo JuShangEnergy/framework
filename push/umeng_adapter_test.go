@@ -2,8 +2,8 @@ package push
 
 import (
 	"fmt"
-	"github.com/freeznet/tomato/push/umeng"
-	"github.com/freeznet/tomato/types"
+	"github.com/JuShangEnergy/framework/push/umeng"
+	"github.com/JuShangEnergy/framework/types"
 	"testing"
 )
 

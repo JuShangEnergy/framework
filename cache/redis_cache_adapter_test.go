@@ -4,7 +4,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/freeznet/tomato/types"
+	"github.com/JuShangEnergy/framework/types"
 )
 
 func Test_redis(t *testing.T) {

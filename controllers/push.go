@@ -1,10 +1,10 @@
 package controllers
 
 import (
-	"github.com/freeznet/tomato/errs"
-	"github.com/freeznet/tomato/push"
-	"github.com/freeznet/tomato/types"
-	"github.com/freeznet/tomato/utils"
+	"github.com/JuShangEnergy/framework/errs"
+	"github.com/JuShangEnergy/framework/push"
+	"github.com/JuShangEnergy/framework/types"
+	"github.com/JuShangEnergy/framework/utils"
 )
 
 // PushController 处理 /push 接口的请求

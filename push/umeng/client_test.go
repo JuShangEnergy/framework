@@ -3,7 +3,7 @@ package umeng_test
 import (
 	"testing"
 
-	"github.com/freeznet/tomato/push/umeng"
+	"github.com/JuShangEnergy/framework/push/umeng"
 	"github.com/stretchr/testify/assert"
 )
 

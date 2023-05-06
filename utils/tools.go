@@ -2,12 +2,12 @@ package utils
 
 import (
 	"fmt"
-	"github.com/freeznet/tomato/errs"
+	"github.com/JuShangEnergy/framework/errs"
 	"reflect"
 	"regexp"
 	"strconv"
 
-	"github.com/freeznet/tomato/types"
+	"github.com/JuShangEnergy/framework/types"
 )
 
 // HasResults Find() 返回数据中是否有结果
@@ -124,10 +124,9 @@ func GetPointer(className, objectId string) types.M {
 	return types.M{"__type": "Pointer", "className": className, "objectId": objectId}
 }
 
-
 /*
 * Throws an exception if the given lat-long is out of bounds.
-*/
+ */
 func ValidatePolygonPoint(latitude, longitude interface{}) error {
 	var latitudeTemp float64
 	var longitudeTemp float64
@@ -140,7 +139,7 @@ func ValidatePolygonPoint(latitude, longitude interface{}) error {
 		if i > 90 {
 			return errs.E(errs.InvalidJSON, fmt.Sprintf("GeoPoint latitude out of bounds: ' %d ' > 90.0.", i))
 		}
-	}else if s, ok := latitude.(string); ok {
+	} else if s, ok := latitude.(string); ok {
 		f, err := strconv.ParseFloat(s, 64)
 		if err != nil {
 			return errs.E(errs.InvalidJSON, "GeoPoint latitude and longitude must be valid numbers")
@@ -160,7 +159,7 @@ func ValidatePolygonPoint(latitude, longitude interface{}) error {
 		if i > 180 {
 			return errs.E(errs.InvalidJSON, fmt.Sprintf("GeoPoint longitude out of bounds: ' %d ' > 180.0.", i))
 		}
-	}else if s, ok := longitude.(string); ok {
+	} else if s, ok := longitude.(string); ok {
 		f, err := strconv.ParseFloat(s, 64)
 		if err != nil {
 			return errs.E(errs.InvalidJSON, "GeoPoint latitude and longitude must be valid numbers")

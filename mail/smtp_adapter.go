@@ -3,10 +3,10 @@ package mail
 import (
 	"net/smtp"
 
-	"github.com/freeznet/tomato/types"
-	"github.com/freeznet/tomato/utils"
+	"github.com/JuShangEnergy/framework/types"
+	"github.com/JuShangEnergy/framework/utils"
 )
-import "github.com/freeznet/tomato/config"
+import "github.com/JuShangEnergy/framework/config"
 
 // SMTPMailAdapter ...
 type SMTPMailAdapter struct {

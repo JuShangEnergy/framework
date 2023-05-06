@@ -1,9 +1,9 @@
 package auth
 
 import (
-	"github.com/freeznet/tomato/config"
-	"github.com/freeznet/tomato/errs"
-	"github.com/freeznet/tomato/types"
+	"github.com/JuShangEnergy/framework/config"
+	"github.com/JuShangEnergy/framework/errs"
+	"github.com/JuShangEnergy/framework/types"
 )
 
 var providers map[string]Provider
@@ -32,7 +32,7 @@ func init() {
 		"douban":         douban{},
 		"yixin":          yixin{},
 		"youdao":         youdao{},
-		"weapp":		  weapp{},
+		"weapp":          weapp{},
 	}
 	options = map[string]types.M{
 		"facebook": types.M{
@@ -48,7 +48,7 @@ func init() {
 			"appIds": []string{},
 		},
 		"weapp": types.M{
-			"appid": "wx871e7bb109ba3bf6",
+			"appid":  "wx871e7bb109ba3bf6",
 			"secret": "e360f37b4a1a8ba9f99dc45b36f34536",
 		},
 	}

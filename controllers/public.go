@@ -3,10 +3,10 @@ package controllers
 import (
 	"strings"
 
-	"github.com/astaxie/beego"
-	"github.com/freeznet/tomato/config"
-	"github.com/freeznet/tomato/publichtml"
-	"github.com/freeznet/tomato/rest"
+	"github.com/JuShangEnergy/framework/config"
+	"github.com/JuShangEnergy/framework/publichtml"
+	"github.com/JuShangEnergy/framework/rest"
+	"github.com/beego/beego"
 )
 
 // PublicController 处理密码修改与邮箱验证请求

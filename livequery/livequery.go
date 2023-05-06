@@ -3,9 +3,9 @@ package livequery
 import (
 	"strings"
 
-	"github.com/freeznet/tomato/config"
-	"github.com/freeznet/tomato/livequery/pubsub"
-	"github.com/freeznet/tomato/livequery/t"
+	"github.com/JuShangEnergy/framework/config"
+	"github.com/JuShangEnergy/framework/livequery/pubsub"
+	"github.com/JuShangEnergy/framework/livequery/t"
 )
 
 // LiveQuery 接收指定类的对象保存与对象删除的通知，发送对象数据到发布者，由发布者通知订阅者，订阅者实时接收数据
@@ -66,10 +66,11 @@ func (l *LiveQuery) HasLiveQuery(className string) bool {
 }
 
 // makePublisherRequest 组装待发布的消息，格式如下
-// {
-// 	"object": {...},
-// 	"original": {...}
-// }
+//
+//	{
+//		"object": {...},
+//		"original": {...}
+//	}
 func (l *LiveQuery) makePublisherRequest(currentObject, originalObject t.M) t.M {
 	req := t.M{
 		"object": currentObject,

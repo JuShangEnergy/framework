@@ -2,8 +2,8 @@ package files
 
 import (
 	"errors"
+	"github.com/JuShangEnergy/framework/config"
 	"github.com/colinmarc/hdfs"
-	"github.com/freeznet/tomato/config"
 	"net/url"
 	"strings"
 )

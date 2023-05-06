@@ -1,6 +1,6 @@
 package push
 
-import "github.com/freeznet/tomato/types"
+import "github.com/JuShangEnergy/framework/types"
 
 type tomatoPushAdapter struct {
 	validPushTypes []string

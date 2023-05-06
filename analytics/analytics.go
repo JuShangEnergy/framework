@@ -1,8 +1,8 @@
 package analytics
 
 import (
-	"github.com/freeznet/tomato/config"
-	"github.com/freeznet/tomato/types"
+	"github.com/JuShangEnergy/framework/config"
+	"github.com/JuShangEnergy/framework/types"
 )
 
 var adapter analyticsAdapter

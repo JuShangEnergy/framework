@@ -1,6 +1,6 @@
 package mail
 
-import "github.com/freeznet/tomato/types"
+import "github.com/JuShangEnergy/framework/types"
 
 // Adapter ...
 type Adapter interface {

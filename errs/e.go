@@ -3,7 +3,7 @@ package errs
 import (
 	"strconv"
 
-	"github.com/freeznet/tomato/types"
+	"github.com/JuShangEnergy/framework/types"
 )
 
 // TomatoError ...
@@ -466,7 +466,7 @@ const FacebookBadID = 251
 const FacebookWrongAppID = 251
 
 // TwitterVerificationFailed ...
-//Twitter credential verification failed.
+// Twitter credential verification failed.
 const TwitterVerificationFailed = 251
 
 // TwitterWrongID ...

@@ -1,7 +1,7 @@
 package cache
 
 import (
-	"github.com/freeznet/tomato/utils"
+	"github.com/JuShangEnergy/framework/utils"
 	"sync"
 	"time"
 )

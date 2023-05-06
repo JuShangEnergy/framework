@@ -5,9 +5,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/freeznet/tomato/errs"
-	"github.com/freeznet/tomato/types"
-	"github.com/freeznet/tomato/utils"
+	"github.com/JuShangEnergy/framework/errs"
+	"github.com/JuShangEnergy/framework/types"
+	"github.com/JuShangEnergy/framework/utils"
 )
 
 func Test_transformKey(t *testing.T) {
@@ -2733,7 +2733,7 @@ func Test_mongoObjectToParseObject(t *testing.T) {
 	/*************************************************/
 	mongoObject = types.M{
 		"location": types.M{
-			"type": "Polygon",
+			"type":        "Polygon",
 			"coordinates": types.S{types.S{types.S{45, -45}, types.S{45, -45}}},
 		},
 	}
@@ -2747,7 +2747,7 @@ func Test_mongoObjectToParseObject(t *testing.T) {
 	result, err = tf.mongoObjectToParseObject("", mongoObject, schema)
 	expect = types.M{
 		"location": types.M{
-			"__type": "Polygon",
+			"__type":      "Polygon",
 			"coordinates": types.S{types.S{45, -45}, types.S{45, -45}},
 		},
 	}

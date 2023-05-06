@@ -3,10 +3,9 @@ package files
 import (
 	"testing"
 
-	"github.com/freeznet/tomato/config"
+	"github.com/JuShangEnergy/framework/config"
 	"reflect"
 )
-
 
 func Test_hdfsAdapter(t *testing.T) {
 	f := newHDFSAdapter("master:8020", "hdfs", "/user/hdfs")

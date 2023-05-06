@@ -3,15 +3,15 @@ package tomato
 import (
 	"strings"
 
-	"github.com/freeznet/tomato/config"
-	_ "github.com/freeznet/tomato/routers"
+	"github.com/JuShangEnergy/framework/config"
+	_ "github.com/JuShangEnergy/framework/routers"
 
-	"github.com/astaxie/beego"
-	"github.com/astaxie/beego/context"
-	"github.com/astaxie/beego/plugins/cors"
-	"github.com/freeznet/tomato/controllers"
-	"github.com/freeznet/tomato/livequery"
-	"github.com/freeznet/tomato/orm"
+	"github.com/JuShangEnergy/framework/controllers"
+	"github.com/JuShangEnergy/framework/livequery"
+	"github.com/JuShangEnergy/framework/orm"
+	"github.com/beego/beego"
+	"github.com/beego/beego/context"
+	"github.com/beego/beego/plugins/cors"
 )
 
 // Run ...

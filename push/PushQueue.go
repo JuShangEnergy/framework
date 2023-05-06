@@ -4,9 +4,9 @@ import (
 	"encoding/json"
 	"errors"
 
-	"github.com/freeznet/tomato/livequery/pubsub"
-	"github.com/freeznet/tomato/rest"
-	"github.com/freeznet/tomato/types"
+	"github.com/JuShangEnergy/framework/livequery/pubsub"
+	"github.com/JuShangEnergy/framework/rest"
+	"github.com/JuShangEnergy/framework/types"
 )
 
 const (

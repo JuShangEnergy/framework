@@ -8,9 +8,9 @@ import (
 
 	"strings"
 
-	"github.com/freeznet/tomato/config"
-	"github.com/freeznet/tomato/errs"
-	"github.com/freeznet/tomato/files/sinastorage"
+	"github.com/JuShangEnergy/framework/config"
+	"github.com/JuShangEnergy/framework/errs"
+	"github.com/JuShangEnergy/framework/files/sinastorage"
 )
 
 type sinaAdapter struct {

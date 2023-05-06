@@ -5,14 +5,14 @@ import (
 	"testing"
 	"time"
 
-	"github.com/freeznet/tomato/cache"
-	"github.com/freeznet/tomato/cloud"
-	"github.com/freeznet/tomato/config"
-	"github.com/freeznet/tomato/errs"
-	"github.com/freeznet/tomato/livequery"
-	"github.com/freeznet/tomato/orm"
-	"github.com/freeznet/tomato/types"
-	"github.com/freeznet/tomato/utils"
+	"github.com/JuShangEnergy/framework/cache"
+	"github.com/JuShangEnergy/framework/cloud"
+	"github.com/JuShangEnergy/framework/config"
+	"github.com/JuShangEnergy/framework/errs"
+	"github.com/JuShangEnergy/framework/livequery"
+	"github.com/JuShangEnergy/framework/orm"
+	"github.com/JuShangEnergy/framework/types"
+	"github.com/JuShangEnergy/framework/utils"
 )
 
 func Test_NewWrite(t *testing.T) {
@@ -2423,10 +2423,10 @@ func Test_handleAuthData(t *testing.T) {
 	orm.Adapter.CreateClass(className, schema)
 	object = types.M{
 		"objectId": "102",
-		"key": "value",
+		"key":      "value",
 		"authData": types.M{
 			"anonymous": types.M{
-				"id":    "1001",
+				"id": "1001",
 			},
 		},
 	}
@@ -2438,13 +2438,13 @@ func Test_handleAuthData(t *testing.T) {
 		"key": "newvalue",
 		"authData": types.M{
 			"anonymous": types.M{
-				"id":    "1001",
+				"id": "1001",
 			},
 		},
 	}
 	originalData = nil
 	w, _ = NewWrite(Master(), className, query, data, originalData, nil)
-	_, result =  w.Execute()
+	_, result = w.Execute()
 	rets, _ = orm.TomatoDBController.Find(className, types.M{}, nil)
 	resultStr := rets[0].(types.M)["key"]
 	expectStr := "newvalue"

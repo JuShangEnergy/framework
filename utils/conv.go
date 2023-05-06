@@ -1,6 +1,6 @@
 package utils
 
-import "github.com/freeznet/tomato/types"
+import "github.com/JuShangEnergy/framework/types"
 
 // A 将 interface{} 转换为 []interface{}
 func A(i interface{}) []interface{} {

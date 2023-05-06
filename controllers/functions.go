@@ -1,9 +1,9 @@
 package controllers
 
 import (
-	"github.com/freeznet/tomato/cloud"
-	"github.com/freeznet/tomato/errs"
-	"github.com/freeznet/tomato/types"
+	"github.com/JuShangEnergy/framework/cloud"
+	"github.com/JuShangEnergy/framework/errs"
+	"github.com/JuShangEnergy/framework/types"
 )
 
 // FunctionsController 处理 /functions 接口的请求
@@ -13,9 +13,11 @@ type FunctionsController struct {
 
 // HandleCloudFunction 执行指定的云函数
 // 返回数据格式如下：
-// {
-// 	"result":"func res"
-// }
+//
+//	{
+//		"result":"func res"
+//	}
+//
 // @router /:functionName [post]
 func (f *FunctionsController) HandleCloudFunction() {
 	functionName := f.Ctx.Input.Param(":functionName")
@@ -70,9 +72,9 @@ func (f *FunctionsController) HandleCloudFunction() {
 		return
 	}
 
-	if response.Response != nil  {
-		v, ok :=response.Response["result"].(types.M)
-		if ok && v["Content-Type"] != nil{
+	if response.Response != nil {
+		v, ok := response.Response["result"].(types.M)
+		if ok && v["Content-Type"] != nil {
 			f.Ctx.Output.Header("Content-Type", v["Content-Type"].(string))
 			f.Ctx.Output.Header("Content-Length", v["Content-Length"].(string))
 			f.Ctx.Output.Header("Content-Disposition", "attachment; filename="+v["filename"].(string))
@@ -139,9 +141,9 @@ func (f *FunctionsController) HandleCloudFunctionGet() {
 		return
 	}
 
-	if response.Response != nil  {
-		v, ok :=response.Response["result"].(types.M)
-		if ok && v["Content-Type"] != nil{
+	if response.Response != nil {
+		v, ok := response.Response["result"].(types.M)
+		if ok && v["Content-Type"] != nil {
 			f.Ctx.Output.Header("Content-Type", v["Content-Type"].(string))
 			f.Ctx.Output.Header("Content-Length", v["Content-Length"].(string))
 			f.Ctx.Output.Header("Content-Disposition", "attachment; filename="+v["filename"].(string))

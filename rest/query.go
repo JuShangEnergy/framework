@@ -5,13 +5,13 @@ import (
 	"sort"
 	"strings"
 
-	"github.com/freeznet/tomato/cloud"
-	"github.com/freeznet/tomato/config"
-	"github.com/freeznet/tomato/errs"
-	"github.com/freeznet/tomato/files"
-	"github.com/freeznet/tomato/orm"
-	"github.com/freeznet/tomato/types"
-	"github.com/freeznet/tomato/utils"
+	"github.com/JuShangEnergy/framework/cloud"
+	"github.com/JuShangEnergy/framework/config"
+	"github.com/JuShangEnergy/framework/errs"
+	"github.com/JuShangEnergy/framework/files"
+	"github.com/JuShangEnergy/framework/orm"
+	"github.com/JuShangEnergy/framework/types"
+	"github.com/JuShangEnergy/framework/utils"
 )
 
 // Query 处理查询请求的结构体
@@ -316,27 +316,30 @@ func (q *Query) validateClientClassCreation() error {
 
 // replaceSelect 执行 $select 中的查询语句，把结果放入 $in 中，替换掉 $select
 // 替换前的格式如下：
-// {
-//     "hometown":{
-//         "$select":{
-//             "query":{
-//                 "className":"Team",
-//                 "where":{
-//                     "winPct":{
-//                         "$gt":0.5
-//                     }
-//                 }
-//             },
-//             "key":"city"
-//         }
-//     }
-// }
+//
+//	{
+//	    "hometown":{
+//	        "$select":{
+//	            "query":{
+//	                "className":"Team",
+//	                "where":{
+//	                    "winPct":{
+//	                        "$gt":0.5
+//	                    }
+//	                }
+//	            },
+//	            "key":"city"
+//	        }
+//	    }
+//	}
+//
 // 转换后格式如下
-// {
-//     "hometown":{
-//         "$in":["abc","cba"]
-//     }
-// }
+//
+//	{
+//	    "hometown":{
+//	        "$in":["abc","cba"]
+//	    }
+//	}
 func (q *Query) replaceSelect() error {
 	selectObject := findObjectWithKey(q.Where, "$select")
 	if selectObject == nil {
@@ -451,31 +454,34 @@ func (q *Query) replaceDontSelect() error {
 
 // replaceInQuery 执行 $inQuery 中的查询语句，把结果放入 $in 中，替换掉 $inQuery
 // 替换前的格式：
-// {
-//     "post":{
-//         "$inQuery":{
-//             "where":{
-//                 "image":{
-//                     "$exists":true
-//                 }
-//             },
-//             "className":"Post"
-//         }
-//     }
-// }
+//
+//	{
+//	    "post":{
+//	        "$inQuery":{
+//	            "where":{
+//	                "image":{
+//	                    "$exists":true
+//	                }
+//	            },
+//	            "className":"Post"
+//	        }
+//	    }
+//	}
+//
 // 替换后的格式
-// {
-//     "post":{
-//         "$in":[
-// 			{
-// 				"__type":    "Pointer",
-// 				"className": "className",
-// 				"objectId":  "objectId",
-// 			},
-// 			{...}
-// 		]
-//     }
-// }
+//
+//	{
+//	    "post":{
+//	        "$in":[
+//				{
+//					"__type":    "Pointer",
+//					"className": "className",
+//					"objectId":  "objectId",
+//				},
+//				{...}
+//			]
+//	    }
+//	}
 func (q *Query) replaceInQuery() error {
 	inQueryObject := findObjectWithKey(q.Where, "$inQuery")
 	if inQueryObject == nil {

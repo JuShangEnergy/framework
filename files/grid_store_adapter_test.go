@@ -3,7 +3,7 @@ package files
 import (
 	"testing"
 
-	"github.com/freeznet/tomato/config"
+	"github.com/JuShangEnergy/framework/config"
 )
 import "reflect"
 

@@ -7,10 +7,10 @@ import (
 
 	"strings"
 
-	"github.com/freeznet/tomato/livequery/pubsub"
-	"github.com/freeznet/tomato/livequery/server"
-	"github.com/freeznet/tomato/livequery/t"
-	"github.com/freeznet/tomato/livequery/utils"
+	"github.com/JuShangEnergy/framework/livequery/pubsub"
+	"github.com/JuShangEnergy/framework/livequery/server"
+	"github.com/JuShangEnergy/framework/livequery/t"
+	"github.com/JuShangEnergy/framework/livequery/utils"
 )
 
 /*
@@ -710,15 +710,16 @@ func getPublicReadAccess(acl t.M) bool {
 }
 
 // getReadAccess 需要解析的格式如下
-// {
-// 	"id":{
-// 		"read":true,
-// 		"write":true
-// 	}
-// 	"*":{
-// 		"read":true
-// 	}
-// }
+//
+//	{
+//		"id":{
+//			"read":true,
+//			"write":true
+//		}
+//		"*":{
+//			"read":true
+//		}
+//	}
 func getReadAccess(acl t.M, id string) bool {
 	if acl == nil {
 		return true

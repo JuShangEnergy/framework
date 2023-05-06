@@ -5,9 +5,9 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/freeznet/tomato/errs"
-	"github.com/freeznet/tomato/types"
-	"github.com/freeznet/tomato/utils"
+	"github.com/JuShangEnergy/framework/errs"
+	"github.com/JuShangEnergy/framework/types"
+	"github.com/JuShangEnergy/framework/utils"
 
 	"github.com/globalsign/mgo"
 )
@@ -464,7 +464,7 @@ func (m *MongoAdapter) HandleShutdown() {
 	m.db.Session.Close()
 }
 
-//allowed modify the table "_SCHEMA"
+// allowed modify the table "_SCHEMA"
 func (m *MongoAdapter) UpdateFields(className string, schema types.M) error {
 	//EMPTY
 	return nil

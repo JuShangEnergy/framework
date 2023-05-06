@@ -3,9 +3,9 @@ package logger
 import (
 	"strings"
 
-	"github.com/astaxie/beego/logs"
-	"github.com/freeznet/tomato/errs"
-	"github.com/freeznet/tomato/types"
+	"github.com/JuShangEnergy/framework/errs"
+	"github.com/JuShangEnergy/framework/types"
+	"github.com/beego/beego/logs"
 )
 
 type beegoLogger struct {

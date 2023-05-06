@@ -4,9 +4,9 @@ import (
 	"github.com/freeznet/influxdb1-client/client"
 	"time"
 
-	"github.com/freeznet/tomato/config"
-	"github.com/freeznet/tomato/types"
-	"github.com/freeznet/tomato/utils"
+	"github.com/JuShangEnergy/framework/config"
+	"github.com/JuShangEnergy/framework/types"
+	"github.com/JuShangEnergy/framework/utils"
 )
 
 type influxDBAdapter struct {

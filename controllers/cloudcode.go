@@ -1,11 +1,11 @@
 package controllers
 
 import (
-	"github.com/freeznet/tomato/cloud"
-	"github.com/freeznet/tomato/errs"
-	"github.com/freeznet/tomato/rest"
-	"github.com/freeznet/tomato/types"
-	"github.com/freeznet/tomato/utils"
+	"github.com/JuShangEnergy/framework/cloud"
+	"github.com/JuShangEnergy/framework/errs"
+	"github.com/JuShangEnergy/framework/rest"
+	"github.com/JuShangEnergy/framework/types"
+	"github.com/JuShangEnergy/framework/utils"
 	"time"
 )
 
@@ -14,14 +14,14 @@ type CloudCodeController struct {
 	ClassesController
 }
 
-func formatJobSchedule(jobSchedule types.M) types.M  {
+func formatJobSchedule(jobSchedule types.M) types.M {
 	if _, ok := jobSchedule["startAfter"]; !ok {
 		jobSchedule["startAfter"] = utils.TimetoString(time.Now())
 	}
 	return jobSchedule
 }
 
-func (c *CloudCodeController) validateJobSchedule()  {
+func (c *CloudCodeController) validateJobSchedule() {
 	jobs := cloud.GetJobs()
 	if v, ok := c.JSONBody["jobName"]; ok {
 		if _, ok := jobs[v.(string)]; !ok {
@@ -30,8 +30,8 @@ func (c *CloudCodeController) validateJobSchedule()  {
 	}
 }
 
-//Prepare ...
-func (c *CloudCodeController) Prepare()  {
+// Prepare ...
+func (c *CloudCodeController) Prepare() {
 	c.ClassesController.Prepare()
 	if c.Ctx.ResponseWriter.Started == false {
 		c.EnforceMasterKeyAccess()
@@ -40,7 +40,7 @@ func (c *CloudCodeController) Prepare()  {
 
 // GetJobs ...
 // @router /jobs [get]
-func (c *CloudCodeController) GetJobs()  {
+func (c *CloudCodeController) GetJobs() {
 	response, err := rest.Find(c.Auth, "_JobSchedule", types.M{}, types.M{}, c.Info.ClientSDK)
 
 	if err != nil {
@@ -77,14 +77,13 @@ func (c *CloudCodeController) GetJobsData() {
 		resultsJobNames = append(resultsJobNames, result["jobName"].(string))
 	}
 
-
 	c.Data["json"] = types.M{"in_use": resultsJobNames, "jobs": jobNames}
 	c.ServeJSON()
 }
 
 // CreateJob ...
 // @router /jobs [post]
-func (c *CloudCodeController) CreateJob()  {
+func (c *CloudCodeController) CreateJob() {
 	c.validateJobSchedule()
 
 	c.ClassName = "_JobSchedule"
@@ -94,7 +93,7 @@ func (c *CloudCodeController) CreateJob()  {
 
 // EditJob ...
 // @router /jobs/:objectId [put]
-func (c *CloudCodeController) EditJob()  {
+func (c *CloudCodeController) EditJob() {
 	c.validateJobSchedule()
 
 	c.ClassName = "_JobSchedule"
@@ -105,7 +104,7 @@ func (c *CloudCodeController) EditJob()  {
 
 // DeleteJob ...
 // @router / [delete]
-func (c *CloudCodeController) DeleteJob()  {
+func (c *CloudCodeController) DeleteJob() {
 	c.ClassName = "_JobSchedule"
 	c.ClassesController.HandleDelete()
 }

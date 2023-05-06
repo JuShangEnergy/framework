@@ -1,17 +1,17 @@
-# tomato
+# Framework
 
 Parse-compatible API server module for Golang/Beego
 
 ## 开始
 ###### 安装
 ```bash
-    go get github.com/freeznet/tomato
+    go get github.com/JuShangEnergy/framework
 ```
 ###### 创建文件 hello.go
 ```go
 package main
 
-import "github.com/freeznet/tomato"
+import "github.com/JuShangEnergy/framework"
 
 func main() {
     tomato.Run()

@@ -4,8 +4,8 @@ import (
 	"net/url"
 	"os"
 
-	"github.com/astaxie/beego/utils"
-	"github.com/freeznet/tomato/config"
+	"github.com/JuShangEnergy/framework/config"
+	"github.com/beego/beego/utils"
 )
 
 // fileSystemAdapter 本地文件存储模块

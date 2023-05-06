@@ -3,10 +3,10 @@ package storage
 import (
 	"database/sql"
 
-	"github.com/freeznet/tomato/config"
-	"github.com/freeznet/tomato/test"
-	_ "github.com/lib/pq" // postgres driver
+	"github.com/JuShangEnergy/framework/config"
+	"github.com/JuShangEnergy/framework/test"
 	"github.com/globalsign/mgo"
+	_ "github.com/lib/pq" // postgres driver
 )
 
 // OpenMongoDB 打开 MongoDB

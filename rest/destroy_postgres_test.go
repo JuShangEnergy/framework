@@ -4,9 +4,9 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/freeznet/tomato/errs"
-	"github.com/freeznet/tomato/orm"
-	"github.com/freeznet/tomato/types"
+	"github.com/JuShangEnergy/framework/errs"
+	"github.com/JuShangEnergy/framework/orm"
+	"github.com/JuShangEnergy/framework/types"
 )
 
 func TestPostgres_Destroy(t *testing.T) {

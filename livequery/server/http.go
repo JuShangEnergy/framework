@@ -8,7 +8,7 @@ import (
 
 	"net/url"
 
-	"github.com/freeznet/tomato/livequery/t"
+	"github.com/JuShangEnergy/framework/livequery/t"
 )
 
 // TomatoInfo ...
@@ -104,7 +104,7 @@ func GetUserRoles(userID string) []string {
 	return r
 }
 
-func GetRelatedRoles(roleID string) []string{
+func GetRelatedRoles(roleID string) []string {
 	p := url.QueryEscape(`{"roles":{"__type":"Pointer","className":"Role","objectId":"` + roleID + `"}}`)
 	req, err := http.NewRequest("GET", TomatoInfo["serverURL"]+"/roles?where="+p, nil)
 	if err != nil {

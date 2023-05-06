@@ -1,8 +1,8 @@
 package cache
 
 import (
+	"github.com/JuShangEnergy/framework/config"
 	"strings"
-	"github.com/freeznet/tomato/config"
 )
 
 // Role ...

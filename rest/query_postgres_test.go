@@ -4,14 +4,14 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/freeznet/tomato/cache"
-	"github.com/freeznet/tomato/config"
-	"github.com/freeznet/tomato/errs"
-	"github.com/freeznet/tomato/orm"
-	"github.com/freeznet/tomato/storage"
-	"github.com/freeznet/tomato/storage/postgres"
-	"github.com/freeznet/tomato/test"
-	"github.com/freeznet/tomato/types"
+	"github.com/JuShangEnergy/framework/cache"
+	"github.com/JuShangEnergy/framework/config"
+	"github.com/JuShangEnergy/framework/errs"
+	"github.com/JuShangEnergy/framework/orm"
+	"github.com/JuShangEnergy/framework/storage"
+	"github.com/JuShangEnergy/framework/storage/postgres"
+	"github.com/JuShangEnergy/framework/test"
+	"github.com/JuShangEnergy/framework/types"
 )
 
 func TestPostgres_Execute(t *testing.T) {
@@ -1679,7 +1679,7 @@ func TestPostgres_replaceNotInQuery(t *testing.T) {
 	orm.TomatoDBController.DeleteEverything()
 }
 
-func TestPostgres_handleExcludeKeys(t *testing.T)  {
+func TestPostgres_handleExcludeKeys(t *testing.T) {
 	var schema types.M
 	var object types.M
 	var where types.M
@@ -1725,7 +1725,7 @@ func TestPostgres_handleExcludeKeys(t *testing.T)  {
 	orm.Adapter.CreateObject(className, schema, object)
 	initPostgresEnv()
 	where = types.M{}
-	options = types.M{"excludeKeys":"key"}
+	options = types.M{"excludeKeys": "key"}
 	className = "user"
 	q, _ = NewQuery(Master(), className, where, options, nil)
 	//err = q.handleExcludeKeys()
@@ -1784,7 +1784,7 @@ func TestPostgres_handleExcludeKeys(t *testing.T)  {
 	orm.Adapter.CreateObject(className, schema, object)
 	initPostgresEnv()
 	where = types.M{}
-	options = types.M{"keys":"key,age", "excludeKeys":"key"}
+	options = types.M{"keys": "key,age", "excludeKeys": "key"}
 	className = "user"
 	q, _ = NewQuery(Master(), className, where, options, nil)
 	//err = q.handleExcludeKeys()
@@ -1816,8 +1816,8 @@ func TestPostgres_handleExcludeKeys(t *testing.T)  {
 			"objectId":  types.M{"type": "String"},
 			"createdAt": types.M{"type": "Date"},
 			"updatedAt": types.M{"type": "Date"},
-			"child1":	 types.M{"type": "Pointer","targetClass": "user"},
-			"child2":	 types.M{"type": "Pointer","targetClass": "user"},
+			"child1":    types.M{"type": "Pointer", "targetClass": "user"},
+			"child2":    types.M{"type": "Pointer", "targetClass": "user"},
 			"key":       types.M{"type": "String"},
 			"_rperm":    types.M{"type": "Array"},
 			"_wperm":    types.M{"type": "Array"},
@@ -1826,52 +1826,52 @@ func TestPostgres_handleExcludeKeys(t *testing.T)  {
 	orm.Adapter.CreateClass(className, schema)
 	object = types.M{
 		"objectId": "01",
-		"child1":   types.M{
+		"child1": types.M{
 			"__type":    "Pointer",
 			"className": "user",
 			"objectId":  "5bcebace6e955221dfa28afa",
 		},
-		"child2":   types.M{
+		"child2": types.M{
 			"__type":    "Pointer",
 			"className": "user",
 			"objectId":  "5bcebace6e955221dfa28afa",
 		},
-		"key":      "hello1",
+		"key": "hello1",
 	}
 	orm.Adapter.CreateObject(className, schema, object)
 	object = types.M{
 		"objectId": "02",
-		"child1":   types.M{
+		"child1": types.M{
 			"__type":    "Pointer",
 			"className": "user",
 			"objectId":  "5bcebace6e955221dfa28afb",
 		},
-		"child2":   types.M{
+		"child2": types.M{
 			"__type":    "Pointer",
 			"className": "user",
 			"objectId":  "5bcebace6e955221dfa28afb",
 		},
-		"key":      "hello2",
+		"key": "hello2",
 	}
 	orm.Adapter.CreateObject(className, schema, object)
 	object = types.M{
 		"objectId": "03",
-		"child1":   types.M{
-			"__type":"Pointer",
+		"child1": types.M{
+			"__type":    "Pointer",
 			"className": "user",
-			"objectId":"5bcebace6e955221dfa28afc",
+			"objectId":  "5bcebace6e955221dfa28afc",
 		},
-		"child2":   types.M{
-			"__type":"Pointer",
+		"child2": types.M{
+			"__type":    "Pointer",
 			"className": "user",
-			"objectId": "5bcebace6e955221dfa28afc",
+			"objectId":  "5bcebace6e955221dfa28afc",
 		},
-		"key":      "hello3",
+		"key": "hello3",
 	}
 	orm.Adapter.CreateObject(className, schema, object)
 	initPostgresEnv()
 	where = types.M{}
-	options = types.M{"include":"child1,child2", "excludeKeys":"child1"}
+	options = types.M{"include": "child1,child2", "excludeKeys": "child1"}
 	className = "user"
 	q, _ = NewQuery(Master(), className, where, options, nil)
 	//err = q.handleExcludeKeys()
@@ -1879,30 +1879,30 @@ func TestPostgres_handleExcludeKeys(t *testing.T)  {
 	expect = types.S{
 		types.M{
 			"objectId": "01",
-			"child2":   types.M{
+			"child2": types.M{
 				"__type":    "Pointer",
 				"className": "user",
 				"objectId":  "5bcebace6e955221dfa28afa",
 			},
-			"key":      "hello1",
+			"key": "hello1",
 		},
 		types.M{
 			"objectId": "02",
-			"child2":   types.M{
+			"child2": types.M{
 				"__type":    "Pointer",
 				"className": "user",
 				"objectId":  "5bcebace6e955221dfa28afb",
 			},
-			"key":      "hello2",
+			"key": "hello2",
 		},
 		types.M{
 			"objectId": "03",
-			"child2":   types.M{
+			"child2": types.M{
 				"__type":    "Pointer",
 				"className": "user",
 				"objectId":  "5bcebace6e955221dfa28afc",
 			},
-			"key":      "hello3",
+			"key": "hello3",
 		},
 	}
 	if err != nil || reflect.DeepEqual(expect, result["results"]) == false {
@@ -3282,7 +3282,7 @@ func TestPostgres_fullTextSearch(t *testing.T) {
 	order := types.M{"$score": -1}
 	keys := []string{"$score"}
 	result, err = orm.TomatoDBController.Find(className, where, types.M{"sort": order, "keys": keys})
-	if err != nil || len(result) != 3 || result[0].(types.M)["score"] == nil || result[1].(types.M)["score"] == nil || result[2].(types.M)["score"] == nil  {
+	if err != nil || len(result) != 3 || result[0].(types.M)["score"] == nil || result[1].(types.M)["score"] == nil || result[2].(types.M)["score"] == nil {
 		t.Error("fullTextSearch: $search, sort", "expect", 3, "result", len(result), result, err)
 	}
 
@@ -3290,7 +3290,7 @@ func TestPostgres_fullTextSearch(t *testing.T) {
 		"subject": types.M{
 			"$text": types.M{
 				"$search": types.M{
-					"$term": "leche",
+					"$term":     "leche",
 					"$language": "spanish",
 				},
 			},
@@ -3305,7 +3305,7 @@ func TestPostgres_fullTextSearch(t *testing.T) {
 		"subject": types.M{
 			"$text": types.M{
 				"$search": types.M{
-					"$term": "CAFÉ",
+					"$term":               "CAFÉ",
 					"$diacriticSensitive": true,
 				},
 			},
@@ -3333,7 +3333,7 @@ func TestPostgres_fullTextSearch(t *testing.T) {
 		"subject": types.M{
 			"$text": types.M{
 				"$search": types.M{
-					"$term": "leche",
+					"$term":     "leche",
 					"$language": true,
 				},
 			},
@@ -3349,7 +3349,7 @@ func TestPostgres_fullTextSearch(t *testing.T) {
 		"subject": types.M{
 			"$text": types.M{
 				"$search": types.M{
-					"$term": "Coffee",
+					"$term":          "Coffee",
 					"$caseSensitive": "string",
 				},
 			},
@@ -3365,7 +3365,7 @@ func TestPostgres_fullTextSearch(t *testing.T) {
 		"subject": types.M{
 			"$text": types.M{
 				"$search": types.M{
-					"$term": "CAFÉ",
+					"$term":               "CAFÉ",
 					"$diacriticSensitive": "string",
 				},
 			},
